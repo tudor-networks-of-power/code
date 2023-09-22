@@ -25,10 +25,10 @@ The dataset was created by first extracting the relevant XML metadata of the Sta
 
 The dataset contains:
 
-- letter_edgelist.tsv	Directed temporal edge list of letters
-- people_labels.tsv	Key for the person IDs used in letter_edgelist.tsv
-- place_labels.tsv	Key for the place IDs used in letter_edgelist.tsv
-- people_metadata.tsv	Additional metadata and URIs for a subset of people
-- places_metadata.tsv	Geolocations and metadata for a large subset of places
+- *letter_edgelist.tsv*	- Directed temporal edge list of letters
+- *people_labels.tsv*	- Key for the person IDs used in letter_edgelist.tsv
+- *place_labels.tsv* - Key for the place IDs used in letter_edgelist.tsv
+- *people_metadata.tsv*	- Additional metadata and URIs for a subset of people
+- *places_metadata.tsv*	- Geolocations and metadata for a large subset of places
 
 Both the code and more extensive datasets that give context to the data curation process, the network analysis methods, and quantitative results in the book will be made available separately.
