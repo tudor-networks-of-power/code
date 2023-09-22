@@ -31,4 +31,4 @@ The dataset contains:
 - *people_metadata.tsv*	- Additional metadata and URIs for a subset of people
 - *places_metadata.tsv*	- Geolocations and metadata for a large subset of places
 
-Both the code and more extensive datasets that give context to the data curation process, the network analysis methods, and quantitative results in the book will be made available separately.
+Both the code and more extensive datasets that give context to the data curation process, the network analysis methods, and quantitative results in the book can be found other subdirectories of this repository.
