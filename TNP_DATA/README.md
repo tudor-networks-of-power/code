@@ -1,6 +1,4 @@
-## Tudor Networks of Power 
-
-### Correspondence Network Dataset
+### Tudor Networks of Power - Correspondence Network Dataset
 
 Ruth Ahnert and Sebastian E. Ahnert
 
