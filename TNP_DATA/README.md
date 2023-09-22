@@ -10,7 +10,7 @@ Ruth Ahnert, Sebastian E. Ahnert, Jose Cree, Lotte Fikkers
 
 - *R. Ahnert, S E. Ahnert, "Tudor Networks of Power", Oxford University Press, 2023.*
 
-- *Ahnert, R., Ahnert, S., Cree, J., & Fikkers, L. (2023). Tudor Networks of Power - correspondence network dataset. Apollo - University of Cambridge Repository. https://doi.org/10.17863/CAM.99562*
+- *R. Ahnert, S. E. Ahnert, J. Cree, & L. Fikkers, "Tudor Networks of Power - correspondence network dataset". Apollo - University of Cambridge Repository (2023). https://doi.org/10.17863/CAM.99562*
 
 The data is released under a Creative Commons BY-NC-SA 4.0 license, which:
 - requires attribution
