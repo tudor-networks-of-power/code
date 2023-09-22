@@ -1,6 +1,6 @@
 ### Tudor Networks of Power - Correspondence Network Dataset
 
-Ruth Ahnert and Sebastian E. Ahnert
+Ruth Ahnert, Sebastian E. Ahnert, Jose Cree, Lotte Fikkers
 
 © 2023. This work is licensed under a CC BY-NC-SA 4.0 license. 
 
@@ -9,6 +9,10 @@ Ruth Ahnert and Sebastian E. Ahnert
 **If using this dataset, please cite:**
 
 **R. Ahnert, S E. Ahnert, "Tudor Networks of Power", Oxford University Press, 2023.**
+
+and
+
+**Ahnert, R., Ahnert, S., Cree, J., & Fikkers, L. (2023). Tudor Networks of Power - correspondence network dataset. Apollo - University of Cambridge Repository. https://doi.org/10.17863/CAM.99562**
 
 The data is released under a Creative Commons BY-NC-SA 4.0 license, which:
 - requires attribution
