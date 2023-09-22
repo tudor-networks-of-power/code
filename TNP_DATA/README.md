@@ -7,6 +7,7 @@ Ruth Ahnert and Sebastian E. Ahnert
 ---
 
 **If using this dataset, please cite:**
+
 **R. Ahnert, S E. Ahnert, "Tudor Networks of Power", Oxford University Press, 2023.**
 
 The data is released under a Creative Commons BY-NC-SA 4.0 license, which:
