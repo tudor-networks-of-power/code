@@ -1,5 +1,7 @@
-##TUDOR NETWORKS OF POWER - CORRESPONDENCE NETWORK DATASET
-###Ruth Ahnert and Sebastian E. Ahnert
+##
+TUDOR NETWORKS OF POWER - CORRESPONDENCE NETWORK DATASET
+###
+Ruth Ahnert and Sebastian E. Ahnert
 
 © 2023. This work is licensed under a CC BY-NC-SA 4.0 license. 
 ---
