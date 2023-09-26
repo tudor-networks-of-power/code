@@ -1,6 +1,6 @@
 This folder contains the code underlying the research described in Chapter 1.
 
-The subfolder `Disambiguation Engine` contains the code for this tool, which creates a local web environment at http://localhost:8081/. This relies on the XML and images of the State Papers Online for full functionality. The appropriate paths need to be inserted into the code at the indicated places. The file containing the mappings produced by the Disambiguation Engine is `people_docs`.
+The subfolder `Disambiguation_Engine` contains the code for this tool, which creates a local web environment at [http://localhost:8081/](http://localhost:8081/). This relies on the XML and images of the State Papers Online for full functionality. The appropriate paths need to be inserted into the code at the indicated places. The file containing the mappings produced by the Disambiguation Engine is `people_docs`.
 
 The rest of the pipeline for data processing is:
 
