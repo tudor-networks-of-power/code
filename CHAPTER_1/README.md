@@ -2,6 +2,8 @@ This folder contains the code underlying the research described in Chapter 1.
 
 The subfolder `Disambiguation_Engine` contains the code for this tool, which creates a local web environment at [http://localhost:8081/](http://localhost:8081/). This relies on the XML and images of the State Papers Online for full functionality. The appropriate paths need to be inserted into the code at the indicated places. The file containing the mappings produced by the Disambiguation Engine is `people_docs`.
 
+Note that `renamed_people` and `added_people` contain further amendments to the people identities in `people_docs`.
+
 The rest of the pipeline for data processing is:
 
 - `python autodisam.py` - This applies the disambiguation rules in `auto_mapping`, outputting `people_docs_auto`.
