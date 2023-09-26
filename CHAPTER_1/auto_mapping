@@ -1,0 +1,1513 @@
+
+# NOTE: <id> <start> <end> <id> <start> <end> ... where start and end can be indices or dates. Note end index is not included, like in Python. Instructions are executed sequentially, and overwritten in that order, if multiple assignments are given.
+#
+# 2641 - first 7 letters assign ID 28048; all the rest assign ID 30465 
+#
+2641 0 7 28048 7 e 30465
+#
+# 6081 Deputy of Calais - first 15 = 1683; next two = 37204; next 4 = 14262; next 2 = 37201; all the rest (until final 12) = 1683; Of final 12, first 8 = 11554, and final 4 = 10002
+# NEW: Re-do rule: 6081 Deputy of Calais - first 1 = 14262; next 14 = 1683; next two = 29766; next 4 = 14262; next 2 = 37201; all the rest (until final 12) = 1683; Of final 12, first 8 = 11554, and final 4 = 10002
+#
+6081 0 1 14262 1 15 1683 15 17 29766 17 21 14262 21 23 37201 23 -12 1683 -12 -4 11554 -4 e 10002 
+#
+# 872 Fanshaw - first 1 = 11548; final 3 11550; all those in between 32642 
+#
+872 0 1 11548 1 -3 32642 -3 e 11550 
+#
+# 9498 - automate: letter 1 assign ID 5816; letter 2 ID 23314; letter 3 ID 5816; letter 4 ID 13514; Letter 5 ID 10511; letter 6 ID 30828; letter 7 ID 13514; from here onwards follow rule: 2 April 1566-9 Nov 1568 assign ID 38047; 10 Nov 1568-Sept 1575 assign ID 2268; 29 Nov 1575-Sept 1585 assign ID 20461; August 1586-1 Jan 1589 assign ID 5890; 2 Jan 1589-Nov 1591 assign ID 13514; 1 Nov 1591-end 1597 assign ID 30828; 1598-11 Dec 1601 assign ID 13492. If anything falls through the gaps, extract and I will manually disambiguate.
+#NEW: PERSON ID: 9498 NAME: French Ambassador RULE: [['0', '1', '5816'], ['1', '2', '23314'], ['2', '3', '5816'], ['3', '4', '13514'], ['4', '5', '10511'], ['5', '6', '30828'], ['6', '7', '13514'], [‘15590512’, ’15600209’, ‘38044’], [’15600209’, ’15620228’, ’18659’], [‘15620228’, ‘15660401’, ‘23769’], ['15660402', '15681109', '38047'], ['15681110', '15750930', '2268'], ['15751129', '15850930', '20461'], ['15860831', '15890101', '5890'], ['15890102', '15911130', '13514'], ['1591101', '15971231', '30828'], ['15910101', '16010210’, '13492’], [‘16010211’, ‘20000000’, ‘4263’]] 
+#
+9498 0 1 5816 1 2 23314 2 3 5816 3 4 13514 4 5 10511 5 6 30828 6 7 13514 15590512 15600209 38044 15600209 15620228 18659 15620228 15660401 23769 15660402 15681109 38047 15681110 15750930 2268 15751129 15850930 20461 15860831 15890101 5890 15890102 15911130 13514 1591101 15971231 30828 15980101 16010210 13492 16010211 20000000 4263
+#
+#10038 first letter should be assigned ID 7287, all the rest are 10037
+#
+10038 0 1 7287 1 e 10037
+#
+#10302 - can we automate? any dating from before 26 July 1538 should be assigned ID 37242; any between this date and 18 November 1590 should be assigned ID 37330
+#NEW: PERSON ID:10302, new rule: '00000000', '15380725', '37242'], ['15380726', '15940620’, '37330’]], except MS HANDLE: Lansdowne_Vol/66_f.202, assign ID 10575
+#
+10302 00000000 15380725 37242 15380726 15940620 37330 MS Lansdowne_Vol/66_f.202 10575
+#
+#10406 - automate? before 3 September 1513 should be assigned ID 10403; after 3 Sept 1513 and before 2 September 1534 should be assigned ID  10405; those after 2 Sept 1534 and 16 November 1585 should be assigned ID 10404; and anything after that should be assigned ID 37238. 
+#NEW: PERSON ID: 10406, MS HANDLE: SP_46/130_f.23, assign ID 10403
+#
+10406 00000000 15130902 10403 15130903 15340902 10405 15320903 15851116 10404 15851117 20000000 37238 MS SP_46/130_f.23 10403
+#
+#11466 - those dating from before 22 April 1542 should be given person ID 37374, those from after should be assigned ID 7287 
+#
+11466 00000000 15420421 37374 15420422 20000000 7287
+#
+#11549 - automate: those dating before October 1568 should be given person ID 11548, those from after should be assigned ID 11550
+#NEW: PERSON ID: 11549, MS HANDLES: SP_46/24_f.179, SP_46/28_f.53, and SP_46/28_f.71, assign ID 11548
+#
+11549 00000000 15680930 11548 15681001 20000000 11550 MS SP_46/24_f.179 11548 MS SP_46/28_f.53 11548 MS SP_46/28_f.71 11548
+#
+#11738 - automate: if it dates from before 19 May 1527 assign ID 11383; if it is from between 19 May 1527 and 29 June 1537 assign ID 37353; if it is from 29 June 1537 - 21 June 1585 assign ID 28860; and if it is from after 21 June 1585 assign ID 37384.  
+#NEW: PERSON ID: 11738, MS HANDLES: SP_96/1_f.106, SP_96/1_f.108, assign ID 0
+#
+11738 00000000 15270518 11383 15270519 15370628 37353 15370629 15850621 28860 15850622 20000000 37384 MS SP_96/1_f.106 0 MS SP_96/1_f.108 0
+#
+#12993 - all manuscript = 12993 except last one, which is ID 32436
+#
+12993 0 -1 12993 -1 e 32436
+#
+#13123 - automate. If the letter is from before 31 March 1529, assign ID 37233; if it dates from between 31 March 1529 and beginning of 1550 assign ID 13125; if it dates from after 1550 assign ID 37234 
+#
+13123 00000000 15290330 37233 15290331 15491231 13125 15500101 20000000 37234
+#
+#13280 - automate. If the letter if from between 1562 and 23 January 1570 use ID 37241. If it is from between 23 January 1570 and 7 February 1592 use ID 37437. And if it is from after 7 February 1592 use ID 37438.
+#NEW: PERSON ID: 13280 NEW RULE: [['15440101', '15700122', '37241'], ['15700123', '15920207', '37437'], ['15920208', '20000000', '37437']]
+#
+13280 15440101 15700122 37241 15700123 15920207 37437 15920208 20000000 37437 
+#
+#14602 - the 6th and 7th letters are the same one. One needs to be designated ID 37441 (John Daniel’s servant, John Daniel); the document number spo1 MQIS SAL-v014-p014 mqes sal-v014-p014-m0304-cm also *may* be a different John Daniel, so assign this ID 37442
+#
+14602 0 5 14601 5 6 37441 6 7 37442 7 e 14601
+#
+#14262 - all letters should have the ID 14262 except for the final letter which should be ID 35084 
+#
+14262 0 -1 14262 -1 e 35084
+#
+#14734 - automate. All letters dating from before 28 October 1572 should be assigned ID 14734, all those from after should be assigned ID 28 October 14733
+#
+14734 00000000 15721027 14734 15721028 20000000 14733
+#
+#16240 - all letters should be assigned this ID with exception of the last 2 in the list, which should be assigned the ID 37557
+#
+16240 0 -2 16240 -2 e 37557
+#
+#Anything assigned ID 16812 - Include all letters dating from before 24 March 1603; exclude those from after that date, or those with no date.
+#NEW: PERSON ID: 16812 ['00000000', '16030323', '16812'], ['16030324', '20000000', '-2']] If the date straddles these windows, just assign 16812.
+#
+16812 0 e 16812 00000000 16030323 16812 16030324 20000000 0
+#
+#17675: automate, for letters dating before 1584, assign ID 37648; for letters dating 1584-1597 assign ID 17667.
+#
+17675 00000000 15831231 37648 15840101 15971231 17667 
+#
+#17918 - I have disambiguated the first 17; all the rest should be assigned ID 15634
+#
+17918 0 8 15634 8 14 28667 14 16 12190 16 e 15634
+#
+#**17684: automate. Firstly can you search if any actually contain the phrase ‘Lord Chancellor of Ireland’ or ‘of Ireland’ appears anywhere in the Title field’. If so, exclude from the rule below and I will re-assign IDs manually (because this is the Irish Lord Chancellor, not the English one). If any contain Dublin in the place field, also exclude and I will disambiguate manually. But if not, then follow this protocol: 
+#From before 1515 assign ID 36131; from 1515 until 30 December 1529 assign  ID 3674; from 31 December 1529 until 25 January 1533 assign ID 30167; from 26 January 1533 to 21 April 1544 assign ID 32290; from 22 April 1544 to 31 January 1547 assign ID 33564; from 1 February 1547 to 22 October 1547 assign ID 35855; from 23 October 1547 to 31 December 1551 assign ID 25967; from 1 January 1552 to 22 August 1553 assign ID 32731; from 23 August 1553 to 12 November 1555 assign ID 30994; from 13 November 1555 to 21 December 1558 assign ID 22858; from 22 December 1558 to 20 February 1579 assign ID 23053; from 21 February 1579 to 12 April 1587 assign ID 30046; 13 April 1587 to 20 November 1591 assign ID 28186; from 21 November 1591 to 5 May 1596 assign ID 29276; after 6 May 1596 assign ID 32609
+#NEW:PERSON ID: 17684, NEW RULE: [['00000000', '15141231', '36131'], ['15150101', '15291230', '3674'], ['15291231', '15330125', '30167'], ['15330126', '15440421', '32290'], ['15440422', '15470131', '33564'], ['15470201', '15470122', '35855'], ['15471023', '15511231', '25967'], ['15520101', '15530822', '32731'], ['15530823', '15551112', '30994'], ['15551113', '15581221', '22858'], ['15581222', '15790220', '23053'], ['15790221', '15870412', '30046'], ['15870413', '15921120', '28186'], ['15911121', '15960505', '29276’]], [‘15960506’, ’20000000’, ‘32609’] and if it spans two windows, can we assign both IDs but with a question mark? **NOT REALLY
+#
+# NOTE: ALSO ADDED INFO FROM EMAIL OF 04/04/19
+17684 00000000 15141231 36131 15150101 15291230 3674 15291231 15330125 30167 15330126 15440421 32290 15440422 15470131 33564 15470201 15470122 35855 15471023 15511231 25967 15520101 15530822 32731 15530823 15551112 30994 15551113 15581221 22858 15581222 15790220 23053 15790221 15870412 30046 15870413 15921120 28186 15911121 15960505 29276 15950506 20000000 32609 MS SP_63/2_f.95 12190 MS SP_63/3_f.74 12190 MS SP_63/9_f.168 12190 MS SP_63/13_f.23 12190 MS SP_63/12_f.0009 12190 MS SP_63/15_f.93 12190 MS SP_63/19_f.30 12190 MS SP_63/19_f.84 12190 MS SP_63/25_f.58 26598 MS SP_63/27_f.96 26598 MS SP_63/29_f.64 26598 MS SP_63/29_f.65 26598 MS SP_63/29_f.71 26598 MS SP_63/29_f.77 26598 MS SP_63/29_f.86 26598 MS SP_63/29_f.91 26598 MS SP_63/29_f.92 26598 MS SP_63/31_f.121 26598 MS SP_63/31_f.130 26598 MS SP_63/45_f.1 265 MS SP_63/45_f.11 265 MS SP_63/45_f.13 265 MS SP_63/45_f.15 265 MS SP_63/45_f.101 265 MS SP_63/45_f.109 265 MS SP_63/45_f.112 265 MS SP_63/45_f.118 265 MS SP_63/45_f.121 265 MS SP_63/45_f.131 265 MS SP_63/45_f.132 265 MS SP_63/45_f.134 265 MS SP_63/45_f.136 265 MS SP_63/45_f.138 265 MS SP_63/45_f.142 265 MS SP_63/45_f.146 265 MS SP_63/45_f.144 265 MS SP_63/45_f.147 265 MS SP_63/45_f.150 265 MS SP_63/45_f.152 265 MS SP_63/45_f.154 265 MS SP_63/45_f.158 265 MS SP_63/45_f.160 265 MS SP_63/45_f.170 265 MS SP_63/45_f.173 265 MS SP_63/45_f.176 265 MS SP_63/45_f.178 265 MS SP_63/45_f.180 265 MS SP_63/45_f.182 265 MS SP_63/45_f.194 265 MS SP_63/56_f.142 30533 MS SP_63/58_f.169 30533 MS SP_63/62_f.50 30533 MS SP_63/65_f.114 30533 MS SP_63/68_f.13 30533 MS SP_63/69_f.0039 30533 MS SP_63/77_f.114 30533 MS SP_63/78_f.37 30533 MS SP_63/126_f.85 265 MS SP_63/128_f.77 265 MS SP_63/131_f.58 265 MS SP_63/135_f.85 265 MS SP_63/145_f.79 265 MS SP_63/151_f.230 265 MS SP_63/152_f.72 265 MS SP_63/152_f.98 265 MS SP_63/153_f.8 265 MS SP_63/153_f.60 265 MS SP_63/153_f.88 265 MS SP_63/153_f.173 265 MS SP_63/153_f.179 265 MS SP_63/154_f.136 265 MS SP_63/159_f.77 265 MS SP_63/159_f.118 265 MS SP_63/160_f.36 265 MS SP_63/166_f.111 265 MS SP_63/166_f.138 265 MS SP_63/172_f.62 265 MS SP_63/172_f.158 265 MS SP_63/173_f.232 265 MS SP_63/174_f.49 265 MS SP_63/174_f.63 265 MS SP_63/174_f.253 265 MS SP_63/175_f.282 265 MS SP_63/176_f.3 265 MS SP_63/176_f.31 265 MS SP_63/176_f.33 265 MS SP_63/176_f.34 265 MS SP_63/176_f.35 265 MS SP_63/176_f.36 265 MS SP_63/176_f.38 265 MS SP_63/176_f.39 265 MS SP_63/176_f.75 265 MS SP_63/185_f.160 265 MS SP_63/185_f.177 265 MS SP_63/185_f.177 265 MS SP_63/185_f.195 265 MS SP_63/185_f.197 265 MS SP_63/178_f.76 265 MS SP_63/178_f.88 265 MS SP_63/179_f.177 265 MS SP_63/181_f.25 265 MS SP_63/182_f.140 265 MS SP_63/183_f.88 265 MS SP_63/183_f.112 265 MS SP_63/183_f.163 265 MS SP_63/184_f.51 265 MS SP_63/185_f.147 265 MS SP_63/185_f.1 265 MS SP_63/185_f.10 265 MS SP_63/185_f.12 265 MS SP_63/185_f.13 265 MS SP_63/185_f.16 265 MS SP_63/185_f.17 265 MS SP_63/185_f.17 265 MS SP_63/185_f.31 265 MS SP_63/185_f.131 265 MS SP_63/185_f.137 265 MS SP_63/185_f.138 265 MS SP_63/185_f.124 265 MS SP_63/185_f.126 265 MS SP_63/185_f.127 265 MS SP_63/185_f.141 265 MS SP_63/185_f.143 265 MS SP_63/185_f.149 265 MS SP_63/185_f.151 265 MS SP_63/185_f.153 265 MS SP_63/185_f.155 265 MS SP_63/185_f.157 265 MS SP_63/186_f.185 265 MS SP_63/189_f.55 265 MS SP_63/188_f.43 265 MS SP_63/188_f.45 265 MS SP_63/188_f.103 265 MS SP_63/189_f.5 265 MS SP_63/189_f.50 265 MS SP_63/189_f.51 265 MS SP_63/189_f.33 265 MS SP_63/189_f.52 265 MS SP_63/189_f.57 265 MS SP_63/189_f.59 265 MS SP_63/189_f.83 265 MS SP_63/189_f.136 265 MS SP_63/200_f.169 265 MS SP_63/213_f.155 265 MS SP_63/208/3_f.189 265 MS SP_63/213_f.188 265
+#
+#17791 and 17816: automate. Follow this rule:
+#from 22 April 1548-26 Dec 1549 assign ID 28355; 
+#from 27 Dec-3 Aug 1550 assign ID 30461;
+#from 7 July 1540-21 April 1548, 4 Aug 1550-28 April 1551, 1 September 1553–26 April 1556, assign ID 1340; 
+#from 29 April 1551-5 December 1552 assign ID 28985;
+#from 6 Dec 1552-31 Aug 1553 assign IDs 30461 and 30085; 
+#from 27 April 1556 - 12 Dec 1558, 3 July 1559-13 Oct 1565 assign ID 30185; 
+#from 12 Dec 1558-3 July 1559, 13 Oct 1565-1 April 1571, 5 Aug 1575-27 Aug 1578 assign ID 28878; 
+#from 27 Aug 1578-10 Oct 1579 assign ID 30507;
+#from 11 Oct 1579-14 Jul 1580 assign ID 30586;
+#from 1 April 1571-4 Aug 1575, 17 Feb 1588-16 May 1594 assign 30517; 
+#from 15 Jul 1580-24 Aug 1582 assign ID 1653; 
+#from 25 Aug 1582-6 Jan 1582 assign IDS 28892 and 265;
+#from 7 Jan 1582–17 Feb 1588 assign ID 29257; 
+#from 16 May 1594–5 Mar 1597 assign ID 30606; 
+#from 5 Mar 1597-14 Oct 1597 assign ID 17667; 
+#from 29 Oct 1597-15 Nov 1597 assign IDs 30171 and 32436;
+#from 15 Nov 1597-11 Mar 1599 assign IDS 265 and 29827;
+#from 12 Mar 1599-23 Sept 1599 26529;
+#from 24 Sept 1599-20 Jan 1600 assign IDs 265 and 28620;
+#after 21 Jan 1600 assign ID 3979.
+#
+#** check multiple comma-separated assignments work properly
+#NEW: PERSON ID: 17791, NEW RULE: [[’15300601’, ‘15320731’, ‘37202’], [’15320801’, ‘15340430’, ‘38049’], [’15340501, ’15351231’, ‘37202’], [15360101’, ‘15400706’, ‘17966’], [’15400707’, ‘15480421’, ‘1340’], [‘15480422', '15491226', '28355'], ['15491227', '15500803', '30461'], ['15400707', '15480421', '1340'], ['15500804', '15510428', '1340'], ['15530901', '15560426', '1340'], ['15510429', '15521205', '28985'], ['15521206', '15530831', '30461,30085'], ['15560427', '15581212', '30185'], ['15590703', '15651013', '30185'], ['15581212', '15590703', '28878'], ['15651013', '15710401', '28878’], ['15750805', '15780826’, '28878'], ['15780827', '15791010', '30507'], ['15791011', '15800714', '30586'], ['15710401', '15750804', '30517'], ['15880217', '15940516', '30517'], ['15800715', '15820824', '1653'], ['15820825', '15820106', '28892,265'], ['15820107', '15880217', '29257'], ['15940516', '15970305', '30606'], ['15970305', '15971014', '17667'], ['15971029', '15971115', '30171,32436'], ['15971115', '15990311', '265,29827'], ['15990312', '15990923', '26529'], ['15990924', '16000120', '265,28620'], ['16000121', '20000000', '3979']] and if it spans two windows, can we assign both IDs but with a question mark (it could be either, not both)?  One exception to this = MS HANDLE: spo1_MQIS_SAL-v001-p001_mqis_sal-v001-p001-m0323-cm which should be assigned ID 28355
+#
+17791 15300601 15320731 37202 15320801 15340430 38049 15340501 15351231 37202 15360101 15400706 17966 15400707 15480421 1340 15480422 15491226 28355 15491227 15500803 30461 15400707 15480421 1340 15500804 15510428 1340 15530901 15560426 1340 15510429 15521205 28985 15521206 15530831 30461,30085 15560427 15581212 30185 15590703 15651013 30185 15581212 15590703 28878 15651013 15710401 28878 15750805 15780826 28878 15780827 15791010 30507 15791011 15800714 30586 15710401 15750804 30517 15880217 15940516 30517 15800715 15820824 1653 15820825 15820106 28892,265 15820107 15880217 29257 15940516 15970305 30606 15970305 15971014 17667 15971029 15971115 30171,32436 15971115 15990311 265,29827 15990312 15990923 26529 15990924 16000120 265,28620 16000121 20000000 3979 MS spo1_MQIS_SAL-v001-p001_mqis_sal-v001-p001-m0323-cm 28355
+#
+#17870 automate; those from before 14 December 1562 assign ID 37200; from 15 December 1562 to 14 October 1593 assign ID 1653; from 15 October 1593 onwards assign ID 35488
+#
+17870 00000000 15621214 37200 15621215 15931014 1653 15931015 20000000 32744
+#
+#17948 automate: from 18 Nov 1558–19 Feb 1579 assign ID 23053; from 20 Feb 1579-25 April 1579 assign 24658; from 26 April 1579–1 April 1587 assign ID 30046; from 29 April 1587–20 Nov 1591 assign ID 28186; from 22 Nov 1591–27 May 1592 assign IDs 30478, 11450, 17762, The 33308; from 28 May 1592–30 April 1596 assign ID 29276; after 6 May 1596 assign ID 32609.
+#
+17948 15581118 15790219 23053 15790220 15790425 24658 15790426 15870401 30046 15870429 15921120 28186 15911122 15920527 30478,11450,17762,33308 15920528 15960430 29276 15960506 20000000 32609
+#
+#18150 - all remainder also assign ID 18150
+#
+18150 0 4 18150 4 18 37661 18 e 18150
+#
+#18154, 18165, 18167 - automate: all (undated) Lansdowne manuscripts should be assigned ID 30478; letters from before 4 December 1522 should be assigned ID 37661; 4 December 1522 – 12 December 1546 should be assigned ID 32851; 10 February 1547 – 10 October 1549 should be assigned ID 8055; 3 February 1550 – 10 March 1572 should be assigned ID 35855; July 1572 – 4 August 1598 should be assigned ID 30478; and anything after 15 May 1599 should be assigned ID 33308
+#
+18154 0 e 30478 00000000 15221203 37661 15221204 15461212 32851 15470210 15491010 8055 15500203 15720310 35855 15720701 15980804 30478 15990515 20000000 33308
+18165 0 e 30478 00000000 15221203 37661 15221204 15461212 32851 15470210 15491010 8055 15500203 15720310 35855 15720701 15980804 30478 15990515 20000000 33308
+18167 0 e 30478 00000000 15221203 37661 15221204 15461212 32851 15470210 15491010 8055 15500203 15720310 35855 15720701 15980804 30478 15990515 20000000 33308
+#
+#18269 - automate: 1567-1568 assign IDs 30517 and 26958; 1582-1584 assign IDs 265 and 28892; 1597-98 assign IDs 30517 and 26958.
+#NEW: PERSON ID: 18269, NEW RULE: [['15670101', '15681231', '30517,26958'], ['15820101', '15841231', '265,28892'], [15990924’, ’20000000’,’265,28620’] Even if it only partially falls within a window, assign that date ID.
+#
+18269 0 e 18269 15670101 15681231 30517,26958 15820101 15841231 265,28892 15990924 20000000 265,28620
+#
+#19546 - automate. Those from before October 1590 should be assigned ID 29458, those from after should be assigned ID 19541
+#
+19546 00000000 15900930 29458 15901001 20000000 19541
+#
+#19706 - assign the first letter ID 19706; assign all the remainder ID 15404
+#
+19706 0 1 19706 1 e 15404
+#
+#20482 - automate. If before 31 May 1589 assign ID 30403; if after assign ID 28063. Apart from final letter in this list which is misdated = February 1578 (i.e.. should be 30403 not 28063).
+#NEW: PERSON ID: 20482, MS HANDLES: SP_46/16_f.0056, SP_46/18_f.131, SP_46/25_f.44, SP_46/32_f.136, SP_46/32_f.137, SP_46/32_f.139, SP_46/35_f.178 (i.e. all cases that fall outside rule) assign ID 30403
+#
+20482 0 e 30403 00000000 15890530 30403 15890531 20000000 28063 -1 e 30403
+#
+#20748 - automate. Before 12 November 1567 assign ID 1057; after, assign ID 31555.
+#
+20748 00000000 15671111 1057 15671112 20000000 31555
+#
+#8712 and 21266 - automate. before 1568 assign ID 11548; those after 1568 assign ID 32642
+#NEW: PERSON ID: 21266, MS HANDLE: SP_46/13_f.322
+#NEW: RULE: [[‘00000000’, '15680701’, '11548'], ['15680702’, ‘16010219’, '32642’]], [‘16010220’, ’20000000’, ‘11550’]. If it crosses time windows 1 and 2, assign  32642.
+#
+21266 00000000 15680701 11548 15680702 16010219 32642 16010220 20000000 11550 MS SP_46/13_f.322 21266
+#NEW: PERSON ID: 8712, MS HANDLE: SP_46/24_f.152, assign 32642
+#NEW: PERSON ID: 8712 - I think the rule you’ve written is wrong: what I want is first letter 1 = 11548; final 3 11550; all those in between 32642.
+8712 0 1 11548 1 -3 32642 -3 e 11550 MS SP_46/24_f.152 32642
+#
+#16240 - all should be assigned ID 16240 except the last 2 letters which should be assigned ID 37786
+#
+16240 0 -2 16240 -2 e 37786
+#
+#23123 - assign first 2 letters ID 11722; all the ret assign ID 6039.
+#
+23123 0 2 11722 2 e 6039
+#
+#28850 - automate. All from before 13 January 1593 should be assigned ID 37646; all those from after should be assigned ID 11344 
+#
+28850 00000000 15930112 37646 15930113 20000000 11344
+#
+#24329 - automate. Letters dating from before 18 October 1503 should be assigned ID 37800; for 31 October 1503 – 21 February 1513 assign ID 24335; 9 March 1513 – 1 December 1521 assign 17445; 9 January 1522 – 14 September 1523 assign ID 24330; 26 November 1523 – 25 September 1534 assign ID 16533; 13 October 1534 – 10 November 1549 assign ID 24339; 7 February 1550 – 29 March 1555 assign ID 24336; 9 April 1555 – 1 May 1555 assign ID 24338; 23 May 1555 – 18 August 1559 assign ID 24340; 26 December 1559 – 9 December 1565 assign ID 24341; 7 January 1566 – 1 May 1572 assign ID 24342; 13 May 1572 – 10 April 1585 assign ID 24333; 24 April 1585 – 27 August 1590 assign ID 24343; 15 September 1590 – 27 September 1590 assign ID 37801; 5 December 1590 – 16 October 1591 assign ID 24334; 29 October 1591– 30 December 1591 assign ID 37802; and after 30 January 1592 assign ID 24332
+#NEW: PERSON ID: 24329, NEW RULE: [['00000000', '15031017', '37800'], ['15031018’, '15130221', '24335'], ['15130222’, '15211201', '17445'], ['15211202’, '15230914', '24330'], ['15230915’, '15340925', '16533'], ['15340926’, '15491110', '24339'], ['15491111’, '15550329', '24336'], ['15550330’, '15550501', '24338'], ['15550502’, '15590818', '24340'], ['15590819’, '15651209', '24341'], ['15651210’, '15720501', '24342'], ['15720502’, '15850410', '24333'], ['15850411’, '15900827', '24343'], ['15900828’, '15900927', '37801'], ['15900928’, '15911016', '24334'], ['15911017’, '15911230', '37802'], ['15911231’, '20000000', '24332’]
+#
+24329 00000000 15031017 37800 15031018 15130221 24335 15130222 15211201 17445 15211202 15230914 24330 15230915 15340925 16533 15340926 15491110 24339 15491111 15550329 24336 15550330 15550501 24338 15550502 15590818 24340 15590819 15651209 24341 15651210 15720501 24342 15720502 15850410 24333 15850411 15900827 24343 15900828 15900927 37801 15900928 15911016 24334 15911017 15911230 37802 15911231 20000000 24332
+#
+#24585: assign all letters apart from the final 2 the following set of IDs: 22715, 15881, 33542, 4577. For the penultimate letter assign IDs 22715, 4576, 33542, 30150 ; for the final letter IDs 22715, 4576, 17496, 30150 - THIS RULE HAS NOW BEEN UNDONE AS WE HAVE DECIDED TO LEAVE PRIVY SIGNET AS ONE ENTITY
+#
+#24585 0 -2 22715,15881,33542,4577 -2 -1 22715,4576,33542,30150 -1 e 22715,4576,17496,30150 # UNDONE, SEE COMMENT ABOVE
+#
+#26415 -  automate. Anything before 1555 assign ID 29798; for all others leave as ID 26415.
+#NEW: PERSON ID: 26415, NEW RULE: [['00000000', '15541231', '29798’]], [‘15541231’, 200000000’, ‘26415’]
+#
+26415 00000000 15541231 29798 15550101 20000000 26415
+#
+#28381 - automate. Anything before 3 July 1579 assign ID 28381; anything after assign ID 28388.
+#
+28381 00000000 15790702 28381 15790703 20000000 28388
+#
+#28611 - automate. Anything before 19 July 1545 leave as ID 28611; anything after should be assigned ID 10014
+#
+28611 00000000 15450718 28611 15450719 20000000 10014
+#
+#11716 - all should be give ID 11716 except for the last 4 entries, which should be assigned ID 4047
+#
+11716 0 -4 11716 -4 e 4047
+#
+#28854 - assign all ID 11722 except for letters with references: SP 63/178 f.204, SP 63/178 f.283, SP 63/191 f.237, SP 63/191 f.274, SP 63/194 f.178, SP 78/33 f.236, SP 78/33 f.253, SP 78/35 f.84, which should be assigned ID 11721
+#
+# for docs put d and in doc IDs replace spaces with _ and comma-separate multiple docs
+28854 0 e 11722 d SP_63/178_f.204,_SP_63/178_f.283,_SP_63/191_f.237,_SP_63/191_f.274,_SP_63/194_f.178,_SP_78/33_f.236,_SP_78/33_f.253,_SP_78/35_f.84 11721
+#
+#29605 - automate: assign all ID 29605, except the first one, to which assign ID 37874
+#
+29605 0 1 37874 1 e 29605
+#
+#29688 - automate: assign all letters dated 1575 or before ID 22142; all those after assign ID 29688
+#
+29688 00000000 15751231 22142 15760101 20000000 29688
+#
+#29766 - automate: assign all letters from before ID 29766; all those after assign ID 29581
+#NEW: 29766 new rule: [[’00000000’, ’15260723’, ‘29766’], [‘15260724’, ’15591231’, ‘38056’], [’15800101’, ’20000000’, ‘29581’]
+#
+29766 00000000 15260723 29766 15260724 15591231 38056 15800101 20000000 29581 
+#
+#29871 - automate: letters from before 18 March 1539 assign ID 37201; those from after but before c.1580 assign 29877; those after 1580 assign ID 26977
+#
+29871 00000000 15390317 37201 15390318 15791231 29877 15800101 20000000 26977 
+#
+#30035 - automate: before 1518 assign ID 30035; from 1518 to 26 February 1552 assign ID 30032; those from after this date, assign 30034; undated ones beginning SP 46/124 f.91 o end of list assign 30032.
+#
+30035 -8 e 30032 00000000 15171231 30035 15180101 15520225 30032 15520226 20000000 30034
+#
+#30056 - automate: those from before 14 October 1565 leave as ID 30056; those from after assign Id 30054.
+#
+30056 00000000 15651013 30056 15651014 20000000 30054
+#
+#30129 - automate: those from before 21 August 1553 assign ID 30134; those from after leave as 30129
+#NEW: PERSON ID: 30129, MS HANDLE: Lansdowne_Vol/106_f.196, assign ID 0
+#
+30129 00000000 15530820 30134 15530821 20000000 30129 MS Lansdowne_Vol/106_f.196 0 
+#
+#30174 - automate: those from before 15 December 1560, assign ID 30313; those from after assign ID 37296
+#
+30174 00000000 15601214 30313 15601214 20000000 37295
+#
+#30507 - could you pull out any letters from before 11 January 1558 for manual disambiguation. All others should stay as 30507.
+#NEW: PERSON ID: 30507, MS HANDLE: SP_1/132_f.160, assign ID 30433
+#
+30507 0 e 30507 00000000 15580110 30433 MS SP_1/132_f.160 30433
+# USED INFO FROM EMAIL OF 04/04/19
+#
+#35387 - automate: those before 1548 assign ID 30511; those dating between 1548 and 12 September 1594 leave as ID 35387; those dating from after 12 September 1594, assign ID 37878
+#
+35387 00000000 15471231 30511 15480101 15940911 35387 15940912 20000000 37878
+#
+#30517 - automate: anything from before 15 October 1542 assign ID 37299; anything from after until 1599 leave as 30517; anything after 1599 assign ID 35401.
+#
+30517 00000000 15421014 37299 15421015 15991231 30517 16000101 20000000 35401
+#
+#30752 - if any letters fall outside approx. 1540-1577, can you extract for annual checking. Otherwise, assign ID 30198 
+#NEW: PERSON ID: 30752, I *THINKK* the rule has been inverted (i.e. is backwards. I think it should be [[‘0’, 'e', ‘-‘1], ['15400101', '15771231', '30198’]]. Let’s discuss this one.
+#
+30752 15400101 15771231 30198
+#
+#31644 - automate: for latters dating 1509-28 January 1547 assign ID 11844; for letters 28 January 1547-6 July 1553 assign ID 16801; for any other letters extract for me to manually assess (there are some)
+#NEW: PERSON ID: 31644, MS HANDLES: SP_70/134_f.25, SP_83/11_f.152, SP_92/1/2_f.124, assign ID 11628
+#NEW: PERSON ID: 31644, MS HANDLE: spo2_sp075_sp075-002-m00046-cm, assign ID 16798
+#NEW: PERSON ID: 31644, MS HANDLES: SP_78/40_f.11, SP_78/41_f.359, SP_78/42_f.360, assign ID 11630
+#
+31644 0 e -1 15090101 15470127 11844 15470128 15530706 16801 MS SP_70/134_f.25 11628 MS SP_83/11_f.152 11628 MS SP_92/1/2_f.124 11628 MS spo2_sp075_sp075-002-m00046-cm 16798 MS SP_78/40_f.11 11630 MS SP_78/41_f.359 11630 MS SP_78/42_f.360 11630
+#
+#31824 - first 2 letters should be assigned ID 19683; all the rest should be assigned ID 24658.
+#
+31824 0 2 19683 2 e 24658
+#
+#32851 - automate: those dating from 1514 to 21 May 1524 assign ID 37661; from 22 May 1524 to 25 August 1554 assign ID 32851; from 26 August 1554 - 2 June 1572 assign ID 37909 
+#NEW: PERSON ID: 32851, NEW RULE: [[’00000000’, '15231231’, '37661'], ['15240101', '15540825', '32851'], ['15540826', '15720602', '37909’], [‘’, ‘’, ‘’]] 
+#**DISCUSS** NEW: Except: PERSON ID: 32851, MS HANDLES: SP_12/203_f.72, Harley_290_f.17, Harley_290_f.74, Harley_290_f.90, Harley_290_f.91, Harley_290_f.92, Harley_290_f.93, and any further ones where sender or recipient is ‘Mary, Queen of Scots’, assign ID 37909
+#NEW: PERSON ID: 32851, MS HANDLE: SP_12/264_f.144, assign ID 18150
+#NEW: PERSON ID: 32851, MS HANDLE: Cotton_Caligula_C/III_f.515, assign ID 38050
+#
+32851 0 e 40000 00000000 15231231 37661 15240101 15540825 32851 15540826 15720602 37909 MS spo1_MQIS_SAL-v013-p013_mqes_sal-v013-p013-m0346-cm 37909 MS spo1_MQIS_SAL-v013-p013_mqes_sal-v013-p013-m0377-cm 37909 MS Harley_290_f.17 37909 MS Harley_290_f.90 37909 MS Harley_290_f.91 37909 MS Harley_290_f.92 37909 MS Harley_290_f.93 37909 MS Harley_290_f.94 37909 MS Harley_290_f.95 37909 MS spo2_mar1-v003-p000_mar1-v003-p000-m0524-cm 37909 MS Cotton_Caligula_C/II_f.284 37909 MS SP_12/264_f.144 18150 MS Cotton_Caligula_C/III_f.515 38050
+#
+#33410: assign letter 1 ID 33410; next letter 37918; next letter 37918; all those thereafter assign ID 32202
+#
+33410 0 1 33410 1 3 37918 3 e 32202
+#
+#35584 - all should be assigned ID 35584 except for last 2 letters, which are ID 4019
+#
+35584 0 -2 35584 -2 e 4019
+#
+#35855 - automate: anything from before 10 March 1572 leave as 35855; anything from after but before 24 November 1598 assign 37964; anything from after 24 November 1598 assign 37965.
+#NEW: PERSON ID: 35855, NEW RULE: [['00000000', '15720309', '35855'], ['15720310', '15981123', '37964’], [‘15981124’, ‘20000000’, ‘37965’]]
+#
+35855 00000000 15720309 35855 15720310 15981123 37964 15981124 20000000 37965
+#
+#35976 - automate: anything from before 4 December 1540 assign 30567; anything from after leave as 35976.
+#
+35976 00000000 15401203 30567 15401204 20000000 35976
+#
+#1521 - automate: 1523-3 August 1528 assign ID 12210; 4 August 1528-28 July 1534 assign ID 13998; 11 January 1536-1554 assign 10004; 21 June 1555-8 August 1567 assign ID 12190; 9 August 1567-1605 assign ID 265.
+#
+# **confirm -1554 means including that year.
+1521 15230101 15280803 12210 15280804 15340728 13998 15360111 15541231 10004 15550621 15670808 12190 15670809 16051231 265
+#
+#1530 and 2379 - automate: 15 April 1509–31 Dec 1523 assign ID 12966; 1 Jan 1524–30 April 1547  assign ID 9790; 4 September 1551-31 Dec 1570 assign ID 12967; 1 Jan 1571-31 Dec 1572 assign ID 1530; 1573–1581 assign ID 37999; 1581–1585 assign ID 38000; 1585–1587 assign ID 38001; 1598-1603 assign ID 12967
+#
+1530 15090415 15231231 12966 15240101 15470430 9790 15510904 15701231 12967 15710101 15721231 1530 15730101 15811231 37999 15810101 15851231 38000 15850101 15871231 38001 15980101 16031231 12967
+2379 15090415 15231231 12966 15240101 15470430 9790 15510904 15701231 12967 15710101 15721231 1530 15730101 15811231 37999 15810101 15851231 38000 15850101 15871231 38001 15980101 16031231 12967
+#
+#1571: - first one assign ID 1572; all others ID 37135
+#
+1571 0 1 1572 1 e 37135
+#
+#2415 - automate: 1507-27 April 1524 assign ID 26483; 27 April 1524-3 October 1538 assign ID 38009; 1 January 1538-April 1544 assign ID 38010; 1545-1 October 1558 ID 38011; 2 October 1558-2 January 1565 assign ID 38012; 3 January 1565-13 May 1574, March 1587-1592 assign ID 15277; 14 May 1574-31 October 1578 assign ID 38013; 5 November 1600-1613 assign ID 5751. If any fall outside these rules, extract for me to disambiguate manually.
+#NEW: PERSON ID: 2415, NEW RULE: [['0', 'e', '-1'], ['15070101', '15240426', '26483'], ['15240427', '15381003', '38009'], ['15380101', '15440430', '38010'], ['15450101', '15581001', '38011'], ['15581002', '15650102', '38012'], ['15650103', ’15960531’, ‘15277’], [‘16001105', '16131231', '5721']]
+#
+2415 0 e -1 15070101 15240426 26483 15240427 15381003 38009 15380101 15440430 38010 15450101 15581001 38011 15581002 15650102 38012 15650103 15960531 15277 16001105 16131231 5721
+#
+# Additional corrections implemented in automatic disambiguation:
+# - Correct mistake - the SENDER of 36157, third letter (SP 61/4 f.185) = Edward IV not Henry VIII. This is the recipient entry but can we find the sender and change?
+16807 0 e 11844 MS SP_61/4_f.185 16801
+# - See 24658 - (Eliz I) all fine, but please exclude Lansdowne Vol/112 f.144.
+24658 0 e 24658 MS Lansdowne_Vol/112_f.144 0
+# New 35216 rule (35216 should be deleted and all the MSS mapped to it should be reassigned using the following rule: [‘00000000’, ‘15900101’, ‘30478’], [‘15900102’, ‘20000000’, ‘29809’]
+3856 00000000 15900101 30478 15900102 20000000 29809
+3859 00000000 15900101 30478 15900102 20000000 29809
+3860 00000000 15900101 30478 15900102 20000000 29809
+3863 00000000 15900101 30478 15900102 20000000 29809
+8503 00000000 15900101 30478 15900102 20000000 29809
+#Exception: spo1 MQIS SAL-v002-p002 mqis sal-v002-p002-m0721-cm ‘Cecilius’ (author) should be mapped back to its original ID 3862
+3862 00000000 20000000 3862
+# New 33288 [‘00000000’,’15541231’,’38063’], [‘15500101’,’20000000’,’33288’]
+33288 00000000 15541231 38063 15500101 20000000 33288
+# New rule for person 1569:[[‘00000000’, ’15580821’, ‘38060’], [‘15580821’, ’15731231’, ‘’], [’15760101’, ’20000000’, ‘17940’]]
+1569 00000000 15580821 38060 15580821 15731231 38060 15760101 20000000 17940
+# 19325 in the disambiguation tool, should be disambiguated further: 19325; 19325; 19387; 19325; 19325; 19325; 19325; 19325; 19387; 19387; 19387; 19387; 19387; 19387; 19387; 19387; 19387; 19325 
+19325 0 e 19325 2 3 19387 8 -1 19387
+# Robert Bowes [26415] Document Ref.: SP 1/50 f.192 - this is mapped to the wrong Robert Bowes. Assign new ID 38061.
+26415 MS SP_1/50_f.192 38061
+#22859 should be mapped to 2258
+22859 0 e 2258
+#24265, 11866 should be mapped to 33192 (aliases of Phelippes)
+24265 0 e 33192
+11866 0 e 33192
+#21158 should be mapped to 24782
+21158 0 e 24782
+#35706 should be mapped to 35708
+35706 0 e 35708
+#28916 should be mapped to 28915
+28916 0 e 28915
+#12307 should be mapped to 12308
+12307 0 e 12308
+#27476 should be mapped to 11094
+27476 0 e 11094
+#1029 should be mapped to 16957
+1029 0 e 16957 
+#23572 should be mapped to 33321
+23572 0 e 33321
+#3118 should be mapped to 11094
+3118 0 e 11094
+#20835 should be mapped to 25873
+20835 0 e 25873
+#16127 should be mapped to 14300
+16127 0 e 14300
+#16126 should be mapped to 12793
+16126 0 e 12793
+#36104 should be mapped to 36105
+36104 0 e 36105
+#3114, 3118, 9616, 24265, 11149, 23831, 23938 should all be mapped to 11094 (for now — this is Sterrell. This is the maximum) # NOTE: LATTER FOUR REMAPPED BELOW
+3114 0 e 11094
+3118 0 e 11094
+9616 0 e 11094
+24265 0 e 11094
+11149 0 e 11094
+23831 0 e 11094
+23938 0 e 11094
+#27458 should be further disambiguated: 27458; 38064
+27458 0 1 27458 1 2 38064
+#Robert Jones [26673] contains a disambiguation error. It contains 3 x Thomas Clerke, clerk to the Privy Seal. All those letters should be assigned instead ID 24584.
+#RESOLVED WITHOUT RULE - ERROR WASN'T DUE TO DISAMBIGUATION
+#All letters mapped to 1556 APART from the original person at 1556 (spo1 HEN8-v006-p000 hen8-v006-p000-m1377-cm); all others should be mapped to 36131
+36131 0 e 36131 
+#I want to undisambiguate these 2: 32202 Tho. Stokes, of London merchant of the Staple 32202 SP 12/185 f.237 AND 33410 Thomas Stokes 33410 (116 manuscripts). They are in fact separate people (one writes to the other).Currently they’re combined as 32202.
+33410 0 1 33410 1 3 37918 3 e 33410
+33407 0 e 33410
+33408 0 1 33408 1 2 33410
+33409 0 e 33410
+# NOTE: THE FIRST LINE ABOVE (33410 0 1 33410 1 3 37918 3 e 33410) REVERSES A PREVIOUS DISAMBIGUATION RULE. 
+# 6822: There should be no 6822 (original 6822 mapped to 4381). Those associated with this ID need redisamabiguation. Harley 288 f.157 should be mapped to 4381; letters associated with name variants ‘Adam’, ‘Admonition’, ‘Agreement for truce’ should all be deleted from the dataset (or assigned 0); Lansdowne Vol/107 f.184 should be mapped to 851; ‘ASP 81/8 f.226 should be mapped to 1096; SP 75/3 f.102 should be mapped to 4381, 26382, 29382, 29181, 5644; delete SP 92/1/2 f.113; SP 78/41 f.4 should be mapped to 29809; SP 78/39 f.171 should be mapped to 30478; SP 78/44 f.137 should be mapped to 5110; SP 78/42 f.316 and ibid. f.325 should be deleted (mapped to 0); SP 52/53 f.85 should be mapped to 10118   
+12 0 e 33288 1 2 4381
+256 0 e 0
+320 0 e 0
+434 0 e 0
+851 0 e 851
+1096 0 e 1096
+1095 MS SP_75/3_f.102 4381,26382,29382,29181,5644 MS SP_92/1/2_f.113 0 MS SP_78/41_f.4 29809 MS SP_78/39_f.171 30478
+1098 MS SP_78/44_f.137 5110
+1702 MS SP_78/42_f.316 0 MS SP_78/42_f.325 0
+1741 MS SP_52/53_f.85 10118
+# 1057 is a man
+# ALREADY DEALT WITH
+#22532, 22533, 22534 should be mapped to 16525 (*who is a woman, even though her name is Julian, so add her to woman list*).
+22532 0 e 16525
+22533 0 e 16525
+22534 0 e 16525
+# ADDED TO WOMEN
+#15210 - one letter should be removed, as surely a separate author : assign letter 12/287 f.108 a new ID = 38062
+15210 0 e 15210 MS SP_12/287_f.108 38062
+#Thos. Wilson, alias Fixer [33967] shouldn’t have John Sicilio mapped to him (received a letter addressed to him and John Sicilio, but they are not the same person)
+#SHOULD BE FIXED NOW
+#SP 61/1 f.237 - the recipient should be 14692[not 35855]
+#CHANGED IN specific_replace
+#SP 15/29 f.222 is from 19699 to 2242 (not from 24658 to 2242)
+#CHANGED IN specific_replace
+#Lansdowne Vol/115 f.78 is the same letter as Lansdowne Vol/103 f.134 (this latter the original), collapse
+#CHANGED IN specific_remove
+#SP 68/15 f.102, SP 68/9 f.99,  SP 46/1 f.64, and SP 46/1 f.64 should be mapped to 7849 (not 11467)
+17758 0 e 11467 MS SP_68/9_f.99 7849 MS SP_68/15_f.102 7849
+17761 0 e 11467 MS SP_46/1_f.64 7849
+#Final 2 letters from 20436 to 32545 = duplicates (collapse)
+#CHANGED IN specific_remove (spo1_HEN8-v012-p002_hen8-v012-p002-m0554x001-cm)
+#
+#FROM CHAIN REMOVAL PROCESS (SEE RUTH'S EMAIL OF 27/09/16):
+3856 00000000 15900101 30478 15900102 20000000 29809
+#
+#**NEW STARTED 24/01/2017**
+#
+#5415 rule: 5415; 5415; 5415; 5415; 5415; 5415; 5415; 5415; 5415; 6430; 6430; 6430; 6430; 5415; 5415
+5415 0 9 5415 9 13 6430 13 e 5415
+#
+#35342 should be mapped to 35344
+35342 0 e 35344
+#
+#22248 and 22172 should both be mapped to 30034
+22248 0 e 30034
+22172 0 e 30034
+#
+#New rule for 17778:[‘00000000’, ‘15251024’, ‘32552’], [‘15251025’, ’15631118’, ‘36229’], [‘15631119’, ’15660701’, ’32553’], [‘15660701’, ‘20000000’, ‘17778’]
+17778 00000000 15251024 32552 15251025 15631118 36229 15631119 15660701 32553 15660701 20000000 17778
+#
+#New rule for 5408: 9030; 19123
+5408 0 1 9030 1 2 19123
+#
+#Anne Duc De Joyeuse [1012] is a man
+# ADDED TO additional_men
+#
+#Linked data 
+#16525 http://www.kateemersonhistoricals.com/TudorWomenA.htm
+#5415 https://en.wikipedia.org/wiki/Anne_Percy,_Countess_of_Northumberland
+# ADDED TO linked_data_consolidated_amend_all_final_edited_incl_4_v2 
+#
+#** NEW RULES and ERRORS **
+#
+#weird, when looking for alias - says 37670 not in network (see alternate number assigned to 18531). What?
+# PROBABLY BECAUSE SENDER OF THAT LETTER IS REMOVED (32005 The queen)
+#
+#Anne Barneys is a man, I think.
+# ADDED TO additional_men
+#
+#See triads notes - found another date fault of the [1594-5] kind. See notes and check more generally.
+# WE WILL ADDRESS THIS SEPARATELY.
+#
+#Can I add letter with anonymous recipient as Alford has identified. 
+#Document Ref.: SP 53/17   Date: April 24 1586 
+#Sender: Recipient: 10530
+#Keen to see how many similar cases we have, where I might be able to identify?
+#Could we add feature where we have a section (not included in network measures). From anonymous or […] and To anonymous or […]? Sometime only author field, like Henry Fagot, the spy. Let’s discuss. 
+#
+# WE COULD SYSTEMATICALLY PULL OUT LETTERS WITH ANONYMOUS SENDERS AND RECIPIENTS AND ADD THEM TO THE DATA, BUT EMPTY <crep> AND <cauth> FIELDS WILL ALSO PULL OUT GOVERNMENT PAPERS, SO THIS REQUIRES MORE CAREFUL THOUGHT AND CLEANING.
+#
+#*Sterrell material need some additional cleaning as some false people are mapped:
+#Lansdowne Vol/99 f.190 alone should be given ID 26848 (all other MSS retain new ID).
+26848 MS Lansdowne_Vol/99_f.190 26848
+#SP 12/271 f.205 and SP 15/32 f.164 (originally IDs 3114 and 3118) should be given ID 3118. G. Fenner (9616) should also be mapped to 3118.
+3114 MS SP_12/271_f.205 3118
+3118 MS SP_15/32_f.164 3118
+9616 0 e 3118
+#28, 33136 and 15615 should be mapped to 12255... 
+28 0 e 12255
+33136 0 e 12255
+15615 0 e 12255
+# AND DUE TO ALTERNATIVE SPELLING OF 33136 (ADDED ON 09/06/20):
+33139 0 e 12255 
+#
+#
+#...EXCEPT SP 77/6 f.230 which should retain the same ID it already has, and SP 77/6 ff.27 should be mapped to 9658
+15615 MS SP_77/6_f.230 15615
+24020 0 e 15615 MS SP_77/6_f.27 9658 
+#All letters FROM Petit to the Halyns alias of Sterrel PLUS all those from Petit to Phelippes should be mapped from 12255 (Owen/Petit - see above) to 11094 AND 33192. 
+#ABOVE INSTRUCTION CLARIFIED:
+#All letters FROM Petit (a) to the Halyns alias of Sterrell or (b) to Phelippes should be duplicated, going from 12255 to both 11094 and 33192. 
+# IMPLEMENTING (a):
+24265 0 e 11094,33192
+11149 0 e 11094,33192
+23831 0 e 11094,33192
+23938 0 e 11094,33192
+# IMPLEMENTING (b) USING grep Petit fromto_all_place | grep Pheli | awk -F'\t' '{print $5}'
+33192 MS spo1_ELZ1-fd1595-td1597_elz1-fd1595-td1597-m1524-cm 11094,33192
+33192 MS spo1_ELZ1-fd1595-td1597_elz1-fd1595-td1597-m1640-cm 11094,33192
+33192 MS spo1_ELZ1-fd1595-td1597_elz1-fd1595-td1597-m2157-cm 11094,33192
+33192 MS spo1_ELZ1-fd1595-td1597_elz1-fd1595-td1597-m2201-cm 11094,33192
+33192 MS spo1_ELZ1-fd1595-td1597_elz1-fd1595-td1597-m2236-cm 11094,33192
+33192 MS spo1_ELZ1-fd1595-td1597_elz1-fd1595-td1597-m2259-cm 11094,33192
+33192 MS spo1_ELZ1-fd1598-td1601_elz1-fd1598-td1601-m0739-cm 11094,33192
+33192 SP_52/66_f.104 11094,33192
+#11865 should be mapped to 11094
+11865 0 e 11094
+#13543 should be mapped to 32667
+13543 0 e 32667
+#18694 should be mapped to 11094.
+18694 0 e 11094
+#The 2 letters sent to 11865 have been collapsed into one - despite being sent on same date, however, they are different letters.
+# SOLVED ABOVE INSTRUCTION BY MODIFYING peoplemap.py CODE TO NOT COLLAPSE LETTERS FOR WHICH WE DON'T HAVE ORIGINAL MS ID
+#8671 and 12779 should be mapped to 9658 ***(These should PROBABLY all be mapped to Verstegan 25296).
+8671 0 e 9658
+12779 0 e 9658
+###### CLARIFY Verstegan POINT IN LAST INSTRUCTION ABOVE
+#
+#I made a mistake below saying 22532, 22533, 22534 should be mapped to 16525. Really it should be 22532, 22532, and 22533 (NOT 22534). In addition to the below, 20836 should also be mapped to 16525. Just need to exclude 2234 and add 2231.
+####### CLARIFIED VERSION OF INSTRUCTION ABOVE:
+#I made a mistake below saying 22532, 22533, 22534 should be mapped to 16525. Really it should be 22531, 22532, and 22533 (NOT 22534). In addition to the below, 20836 should also be mapped to 16525. Just need to exclude 22534 and add 22531.
+# NOTE: 'below' ABOVE IS IN FACT FURTHER ABOVE HERE, SO WE CAN CORRECT IT HERE.
+22534 0 e 22534
+22531 0 e 16525
+20836 0 e 16525
+#Linked to this 21604 should be mapped to 29175
+21604 0 e 29175
+#
+#
+#You know how sometimes 2 entries are collapsed because they refer to the same letter. I wonder if sometimes the one you have made vanish is the one with the image linked to it? Is there any way of checking that. This is not just a theory, but based on observations that images aren’t there when I would expect there to be some. I think image linked to the  updated calendar, which also has the FULLER descriptions is there a way of making sure you’re going preference to that? Give Sterrell letter ref.
+# THIS MAY BE RESOLVED NOW AS IMAGE LINK WASN'T ALWAYS LOOKING AT CORRECT SPO CORPUS.
+#Note linked data not up to date in tool.
+#
+#Note I can’t click through to MS image for:
+#Recipient: King Henry VIII
+#Author: Sir Thomas Spinelly
+#Year: 1509
+#Place:
+#Title: [216.] Th. Spinelly to Henry VIII.
+#Day: 26 June
+#Document Ref.: SP 1/1 f.35
+#But can see it on SPO website. What’s wrong? Smilarly Bizzarri - can’t see a lot of images, c=bit can in the disambiguation tool.
+#
+#See another example:
+#Recipient: King Henry VIII
+#Author: Sir Thomas Spinelly
+#Year: 1512
+#Place: Brussells
+#Title: [3340.] Thomas Spinelly to Henry VIII.
+#Day: 27 July
+#################### ALL OF THESE CASES SHOULD BE RESOLVED NOW
+#
+#Palvesin [ID 1113] not female 
+# FILE additional_men AMENDED ACCORDINGLY 
+#
+#New rule for 4591 (Cobham) [‘15580101’, ’15970306’, ‘17762’], [‘15970306’, ‘20000101’, ‘11437’]
+4591 15580101 15970306 17762 15970306 20000101 11437
+#
+#Same rule for 11437 - [‘15580101’, ’15970306’, ‘17762’], [‘15970306’, ‘20000101’, ‘11437’]
+11437 15580101 15970306 17762 15970306 20000101 11437
+#
+#New rule for 25740: assign all letters with ID 25740 apart from letter 2, to which assign new number: 38066
+25740 1 2 38066
+#
+#139, 140 should be mapped to 1348
+139 0 e 1348
+140 0 e 1348
+##138 - all letters should be mapped to 1348 - REVISED AFTER THIS PRODUCED UNREASONABLE LETTER TIME GAP.
+#138 0 e 1348
+#1349: change to 37139, 1348 
+1349 0 e 37139,1348
+#also change 37139 label to: Anthony Standen, senior
+# FILE added_people AMENDED ACCORDINGLY
+#
+#1817 should be mapped as follows: 32316; 1817
+1817 0 e 32316;1817
+#
+#18882 should be mapped to 32316
+18882 0 e 32316
+#
+#1915 should be mapped to 10419
+1915 0 e 10419
+#
+#5853, 18494 and 17578 should be mapped to 20687
+5883 0 e 20687
+18494 0 e 20687
+17578 0 e 20687
+#
+#28794 should be mapped to 11468
+28794 0 e 11468
+#
+#11097 should be mapped to 11353 - CORRECTION: THIS WOULD CREATE A 2-LOOP SO WE WON'T DO THIS
+#11097 0 e 11353
+#
+#5066 should be mapped to 10541
+5066 0 e 10541
+#
+#1817 should be mapped to 33288
+1817 0 e 33288
+#
+#1029 should be mapped to 16957 
+1029 0 e 16957 
+#
+#33288 should be mapped to 22763 - THIS IS ACTUALLY WRONG
+#33288 0 e 22763
+#
+#7900 should be mapped to 7901
+7900 0 e 7901
+#
+#23498 should be mapped to 26375
+23498 0 e 26375
+#
+#11353 should be mapped to 11097 (it’s actually the same letter)
+11353 0 e 11097 
+#
+#23582 should be mapped to 26791
+23582 0 e 26791
+#
+#22388 should be mapped to 33192
+22388 0 e 33192
+#
+#35688 and 18495 should be mapped to 35717
+35688 0 e 35717
+18495 0 e 35717
+#
+#18777 and 35890 should be mapped to 33192
+18777 0 e 33192
+35890 0 e 33192
+#
+#6117 should be mapped to 5378
+6117 0 e 5378
+#
+#31253 and 32175 should be mapped to 33105
+31253 0 e 33105
+32175 0 e 33105
+#
+#5066 should be mapped to 10541
+5066 0 e 10541
+#
+#22859 should be mapped to 22858
+22859 0 e 22858
+#
+#19253 should be mapped to 9329
+19253 0 e 9329
+#
+#19541 should be mapped to 28782
+19541 0 e 28782
+#
+#20435 should be mapped to 20436
+20435 0 e 20436
+#
+#30230 should be mapped to 10492
+30230 0 e 10492
+#
+#4842 should be mapped to 19700
+4842 0 e 19700
+#
+#17119 to be mapped to 3837
+17119 0 e 3837
+#
+#17173 should be mapped to 34250
+17173 0 e 34250
+#
+#30925 should be mapped to 8575
+30925 0 e 8575
+#
+#3631 should be mapped to 3634
+3631 0 e 3634
+#
+#32713 and 33315 should be mapped to 33105
+32713 0 e 33105
+33315 0 e 33105
+#
+#36743 should be mapped to 19263
+36743 0 e 19263
+#
+#3678 should be mapped to 6215
+3678 0 e 6215
+#
+#11865 should be mapped to 11094
+11865 0 e 11094
+#
+#30787 should be mapped to 6359
+30787 0 e 6359
+#
+#6201 should be mapped to 6468
+6201 0 e 6468
+#
+#6266 should be mapped to 1435
+6266 0 e 1435
+#
+#21810 should be mapped to 23006
+21810 0 e 23006
+#
+#35223 should be mapped to 35224
+35223 0 e 35224
+#
+#19522 should be mapped to 33966
+19522 0 e 33966
+#
+#21195 should be mapped to 37135
+21195 0 e 37135
+#
+#11212 should be mapped to 28910
+11212 0 e 28910
+#
+#12756 and 12839 should be mapped to 15877 
+12756 0 e 15877 
+12839 0 e 15877 
+#
+#27458 should be mapped to 31025
+27458 0 e 31025
+#
+#2769 should be mapped to 8870
+2769 0 e 8870
+#
+#14, 7028, 18686, 19088 should be mapped to 18681
+# CORRECTION: MAPPED TO 7028 INSTEAD (18681 ALREADY IS)
+14 0 e 7028
+7028 0 e 7028
+18686 0 e 7028
+19088 0 e 7028
+#
+#8684 should be mapped to 32667
+8684 0 e 32667
+#
+#33647 should be mapped to 32581
+33647 0 e 32581
+#
+#11024 should be mapped to 32838
+11024 0 e 32838
+#
+#12835 and 12839 should be mapped to 15877
+12835 0 e 15877
+12839 0 e 15877
+#
+#22131 should be mapped to 31009
+22131 0 e 31009
+#
+#19106 should be mapped to 18532 (also both = same letter so collapse) 
+19106 0 e 18532 
+#
+#22648 should be mapped to 32316
+22648 0 e 32316
+#
+#15708 should be mapped to 12753
+15708 0 e 12753
+#
+#23582 should be mapped to 26791
+23582 0 e 26791
+#
+#2949 and 3393 should be mapped to 2949
+2949 0 e 2949
+3393 0 e 2949
+#
+#21903, 24320, 24850, and 26281 should be mapped to 26811
+21903 0 e 26811
+24320 0 e 26811
+24850 0 e 26811
+26281 0 e 26811
+#
+#8642 sends 2 letters (different dates) but only 1 shows up in exploratory tool. What’s going on?
+################### RUTH MAPPED THE RECIPIENT OF THIS LETTER TO 0, BUT ONLY FOR THIS PARTICULAR MS. SEE:
+###33540   Thomas Wilson   6482; 33966; 6482; 33966; 33966; 33966; 33966; 33966; 33966; 33966;\
+### 6482; 6482; 33966; 6482; 33966; 33966; 33966; 0     SP_15/21_f.189 SP_15/34_f.137 SP_11/12\
+###_f.111 spo1_MQIS_SAL-v010-p010_mqis_sal-v010-p010-m0676-cm spo1_MQIS_SAL-v011-p011_mqis_sal\
+###-v011-p011-m0398-cm spo1_MQIS_SAL-v012-p012_mqis_sal-v012-p012-m0723-cm spo1_MQIS_SAL-v012-\
+###p012_mqis_sal-v012-p012-m0837-cm spo1_MQIS_SAL-v014-p014_mqes_sal-v014-p014-m0647-cm spo1_M\
+###QIS_SAL-v015-p015_mqes_sal-v015-p015-m0473-cm spo1_MQIS_SAL-v023-p023_mqes_sal-v023-p023-m0\
+###092-cm SP_70/22_f.139 SP_70/49_f.193 Harley_288_f.161 spo2_odow-v001-p000_odow-v001-p000-m0\
+###404-cm SP_79/1_f.11 SP_79/1_f.9 SP_79/1_f.13 SP_85/3_f.6
+#
+#14 (currently mapped to 12) should be mapped back to its own number - i.e 14.
+####### CLARIFY - 14 IS NOT MAPPED TO 12, RUTH MAPS IT TO 18681 ABOUT FIFTY LINES ABOVE. WHAT IS CORRECT?
+#
+#New rule for 36248. Those dating from before 16 June 1581 should be mapped to 6482; those from after should be mapped to 33966.
+36248 00000000 15810615 6482 15810616 20000000 33966
+#
+#New rule for 33966: 33966; 33966; 33966; 33966; 33966; 2949; 33966; 33966; 33966; 33966; 33966; 33966
+33966 0 e 33966 5 6 2949
+#
+#
+#SP 1/87 f.14 ONLY should be mapped back to its original number 33287.
+33287 MS SP_1/87_f.14 33287
+#
+#one of the IDs mapped to 32279 [Recipient: Mr. Thos. Arundel, Author: Samuel Symkroft, Year: 1596, Document Ref.: none] should rather be mapped to 30034 
+22248 0 e 30034
+#
+#Lansdowne Vol/103 f.268 should be mapped to 35213 NOT 30478
+35216 MS SP_1/87_f.14 35213
+#
+#SP 97/2 f.161 should be mapped to 28635 (not 10541)
+9624 0 e 28635
+#
+#SP 77/5 f.9, SP 78/13 f.103, SP 77/5 f.14, SP 78/20 f.0111, SP 77/5 f.12 and SP 94/3 f.107 (currently mapped to 30168) should be mapped to 33105
+30168 MS SP_77/5_f.9 33105
+30168 MS SP_78/13_f.103 33105
+30168 MS SP_77/5_f.14 33105
+30168 MS SP_78/20_f.0111 33105
+30168 MS SP_77/5_f.12 33105
+30168 MS SP_94/3_f.107 33105
+#
+#SP 84/14 f.274, SP 84/33 f.85, SP 84/21 f.81, SP 84/32 f.233, SP 84/15 f.75 should be mapped to 30168
+33105 MS SP_84/14_f.274 30168
+33105 MS SP_84/33_f.85 30168
+33105 MS SP_84/21_f.81 30168
+33105 MS SP_84/32_f.233 30168
+33105 MS SP_84/15_f.75 30168
+#
+#21416 should be separated from all other IDs mapped to 11958 and given its own number again (it’s the son of the same name, I think)
+21416 0 e 21416
+#
+#Weird thing, SP 11/5 f.125 says it’s mapped to 30198, but when you click he snake in the letter it clicks through to 5487 (a different thomas smith)
+#FIXED NOW, WAS BUG IN INTERFACE.
+#
+#12: letter 2, map back to 12. I made a false identification.
+12 2 3 12
+#
+#35617 is currently mapped to 36079. Undo this, and leave them mapped to their own numbers.
+35617 0 e 35617
+#
+#Delete this from network: Title: The Earl of Devon's case concerning divers Manors
+#Document Ref.: Lansdowne Vol/106 f.172
+7288 MS Lansdowne_Vol/106_f.172 0
+16763 MS Lansdowne_Vol/106_f.172 0
+#
+#Lansdowne Vol/68 f.207 A fragment of a letter from Mrs. Penn, to Lord Kildare, respecting money owing to her; with his Lordship's answer, June 23, 1591.
+#MAKE THIS 2 edges - i.e one in each direction between these nodes
+#### PROBLEMATIC - CANNOT ADD EDGES EASILY, AND DATE OF ONE OF THE LETTERS IS ALSO UNCERTAIN? 
+#
+#Duke de Joyeuse is a man
+# ALREADY CHANGED (SEE additional_men)
+#
+#Lansdowne Vol/104 f.162, Lansdowne Vol/104 f.170, Lansdowne Vol/104 f.172, Lansdowne Vol/104 f.174 should all be mapped to 22515 not 16972
+22483 0 e 22515
+#
+#Add linked data:
+#1291 http://www.historyofparliamentonline.org/volume/1509-1558/member/kempe-anthony-1529-97 - ADDED
+#1401 https://en.wikipedia.org/wiki/Antonio_Bonvisi - ALREADY ADDED
+#1002 https://en.wikipedia.org/wiki/Anne_Dacre,_Countess_of_Arundel - ALREADY ADDED 
+#19910 https://en.wikipedia.org/wiki/Matth%C3%A4us_Schiner
+#4273 https://en.wikipedia.org/wiki/Christopher_Bainbridge - ALREADY ADDED
+#440 https://en.wikipedia.org/wiki/Pierre_Alamire
+#9329 https://fr.wikipedia.org/wiki/Fran%C3%A7ois_de_Taxis
+#28782 https://en.wikipedia.org/wiki/Henry_Bagenal
+#
+#
+#Mr. Strype [22139] should to be in network.He is there because a copy of a letter is his (he is a historian from a later period).
+22139 0 e 0
+#
+#Mary, Queen of Scots' Commissioners [19700] are men (currently listed under women)
+# ADDED TO additional_men
+#
+#Queen Elizabeth's Commissioners [24667] are men (currently listed under women)
+# ADDED TO additional_men
+#
+#Still, some letter duplicates need collapsing - e.g.:
+#From: Humphrey Belton [12360]
+#To: Richard Hopkins [25713]
+#
+#Images (2)
+#Recipient: Mr. Hopkins
+#Author: Humphrey Belton
+#Year: 1592
+#Place: Rouen
+#Title: Humphrey Belton to Mr. Hopkins, in Antwerp.
+#Day: Dec. [14]/24, and [21]/31
+#Document ID: 4313800943
+#Document Ref.: SP 84/45 f.389
+#
+#Holograph. Three postscrips, the last dated December 31. 2pp. See Analysis 267.
+#fo. 389
+#
+#Images (2)
+#Recipient: Mr. Hopkins, Antwerp
+#Author: Humfrey Belton
+#Year: 1592
+#Place:
+#Title: Humfrey Belton to Mr. Hopkins, Antwerp.
+#Day: Dec. 24
+#Document ID:
+#Document Ref.: SP 84/45 f.389
+#
+# REMOVE SECOND INSTANCE AS IT SEEMS TO BE A SUBSET OF THE FIRST, WITH THE SAME MS ID.
+# NOTE: NEED TO USE 21491 NOT 25713 FOR RICHARD HOPKINS AS THIS PARTICULAR MS IS UNDER THIS NAME LABEL.
+#12360 15921223 15921225 0
+#21491 15921223 15921225 0 
+#
+#FROM LETTER TIME GAPS ANALYSIS:
+#*('15001112', '16001112')       1       100.002464126   ('35846', '10002', '15001112', '16001112', 'spo2_har1-v001-p000_har1-v001-p000-m05119-cm', 'Oteland', 'spo2/har1-v001-p000/har1-v001-p000-m05119-cm.xml')
+#Actually this letter mapped to wrong William Parr (sender). It should be ID 19528, and letter dates from before he made Marquis Northampton, so (‘15430101’, ‘15471231’)
+35846 MS spo2_har1-v001-p000_har1-v001-p000-m05119-cm 19528
+#
+#FROM LETTER TIME GAPS ANALYSIS:
+#%('15350504', '16030504')       1       68.001675606    ('30494', '7488', '15350504', '16030504', 'SP_46/71_f.2', '-', 'spo2/sp046/sp046-071-m10163-cm.xml', 'SP 46/71 f.2')
+#I’m not 100% the sender of this letter is the same William Courtenay as the ID and Linked data, so I suggest assigning him a new number instead of 30494. No clue on date.
+30494 MS SP_46/71_f.2 38067
+#
+#*** NEW STARTED 14/08/17 ***
+#All people currently mapped to 23021 should be mapped to 23006. 
+22996 0 e 23006
+23021 0 e 23006
+23022 0 e 23006
+23023 0 e 23006
+#
+#21157 should be mapped to 14601
+21157 0 e 14601
+#
+#21266 should probably be mapped to 32642
+21226 0 e 32642
+#
+#32614 should be mapped to 30106
+32614 0 e 30106
+#
+#24274 https://en.wikipedia.org/wiki/Pietro_Bizzarri
+#30206 https://en.wikipedia.org/wiki/Thomas_Spinelly
+#ADDED TO LINKED DATA
+#
+#Unmuddle these 2: 26830 includes some of 
+#26830 https://en.wikipedia.org/wiki/Robert_Radclyffe,_5th_Earl_of_Sussex
+#17848 https://en.wikipedia.org/wiki/Robert_Radcliffe,_1st_Earl_of_Sussex
+26830 00000000 15421127 17848
+#OTHERS STAY 26830
+26830 15421128 20000000 26830
+#
+#18904 add linked data: https://fr.wikipedia.org/wiki/Charles_de_Gavre
+#ADDED TO LINKED DATA
+#
+#8591 (and all nodes mapped to 8591) should be mapped to 8575.
+8591 0 e 8575
+30950 0 e 8575
+#
+#SP 83/11 f.152 mapped to wrong king - should be Philip II (16819) not Henry III of France (11628)
+31644 MS SP_83/11_f.152 16819
+#
+#SP 83/11 f.148 also Archduke here is currently mapped to 8430, but much more likely to be 1565. Can we change this too? 
+1559 MS SP_83/11_f.148 1565
+#
+#SP 83/11 f.148 Philip II ID 16819 is also an author (writing to 2710 only). Can we add this? It will affect our wordnets for Dutch section of chapter.  
+#ADDED IN specific_add
+#
+#34407 add linked data: https://en.wikipedia.org/wiki/Jean_de_Ferri%C3%A8res
+#ADDED
+#3024 add linked data: http://www.oxforddnb.com/view/article/4668
+#ALREADY ADDED
+#17436 should be mapped to 30154
+17436 0 e 30154
+#
+#30925 (and All nodes currently mapped to 30925) should be mapped to 8575
+#ALREADY DONE
+#
+#37797 should be mapped to 32545
+#SINCE 37797 IS A NEW ID INTRODUCED FOR A LETTER IN 23280, WE ACTUALLY WANT:
+23280 -1 e 32545
+#
+#From email I sent on 2/08/17 So it turns out that 28782 and 19541 are the same person. Can we merge the 2 with 28782 as the one we map to? 
+#ALREADY DONE
+#
+#** NEW Started 02/02/17 (not incorporated yet)**
+#
+#1423 should be mapped to 16456
+1423 0 e 16456
+#
+#19995 should be mapped to 20477
+19995 0 e 20477
+#
+#See if 11468 = 28789 (if so map latter to former).
+#RUTH CHECKED THIS.
+28789 0 e 11468
+#
+#24331 should be mapped to 16533 [but all should be labelled Clement VII - i.e the label of 24331]
+#MAPPING ALREADY DONE, USING POPE NAME LABEL DOESN'T REALLY MAKE SENSE
+#
+#20800 should be mapped to 29717 
+#NOTE: 21794 ALSO CURRENTLY MAPS TO 20800
+20800 0 e 29717
+21794 0 e 29717
+#
+#565 should be mapped to 532
+565 0 e 532
+#24008 should be mapped to 3614
+24008 0 e 3614
+#
+#32970 should be mapped to 6907
+32970 0 e 6907
+#
+#28814 should be mapped to 28815, and linked to http://libsta28.lib.cam.ac.uk:2332/view/article/10448/70733?docPos=2 AND http://www.historyofparliamentonline.org/volume/1558-1603/member/gates-sir-henry-1515-89
+28814 0 e 28815
+#ADDED HOP LINKED DATA
+#
+29605 http://www.historyofparliamentonline.org/volume/1509-1558/member/eure-%28evers%29-sir-ralph-1510-45
+#ADDED TO LINKED DATA
+#
+#***Need to check if 34619 should be mapped to 12255
+#RUTH THINKS WE SHOULD MAP THIS
+34619 0 e 12255
+#
+#33826 should be mapped to 32961
+33826 0 e 32961
+#
+#29532 should be mapped to 11094 AND 33192 [i.e Sterrell and Phelippes shared alias]
+29532 0 e 11094,33192
+#
+#I’m concerned that this one hasn’t already been done as it is listed below: 3678 should be mapped to 6215
+#Can you check previous section of new rules and errors under this has been done systematically?
+# ALREADY MAPPED
+#
+#Current 9610 should be mapped to 9681 
+9610 0 e 9681
+#
+#Current 10653 (5693 originally) should be mapped to 10654
+5693 0 e 10654
+#
+#18495 should be mapped 35717
+18495 0 e 35717
+#
+#37792 should be mapped to 23384
+#SINCE 37792 IS A NEW ID INTRODUCED FOR A LETTER IN 22100, WE ACTUALLY WANT:
+22100 -1 e 23384
+#
+#16703 should be mapped to 16731
+16703 0 e 16731
+#
+#SORT OUT**Godfrey Foljambe [10706] writes a letter to Wolsey. Must be a searate GF, assign new ID.p
+2581 0 e 2579,30466,38086,36542,29798,15574,16061
+#ADDED NEW Godfrey Foljambe [38067 - no, changed to 38086] 
+#
+#SP 3/10 f.123 is received by Lady Lisle [12118] not Lord Lisle [1683]
+1683 MS SP_3/10_f.123 12118
+#
+#29668 should be mapped to 5969
+29668 0 e 5969
+#
+#1367 should be mapped to 1479
+1367 0 e 1479
+#
+#Florentyne de Mortaygne [8915] is a woman
+#ADDED TO additional_women
+#
+#14851 should not be mapped to 14768, return to its original ID
+14851 0 e 14851
+#
+#22484 https://en.wikipedia.org/wiki/Susan_Clarencieux
+#ADDED TO LINKED DATA
+#
+#19914 new rule: all 19914 except last 3, which should be assigned the following IDs: 19347; 8571  
+#RUTH ADDED: "should say #19914 new rule: all 19914 except last *2*, which should be assigned the following IDs: NEW ID; 8571. Could you generate new ID and link to: https://en.wikipedia.org/wiki/Robert_Stewart,_1st_Earl_of_March"
+#NEW ID ADDED: 38197 # HAD TO SHIFT THIS NUMBER DUE TO CONFLICT BETWEEN ADDITIONS
+19914 -2 -1 38197 -1 e 8571
+#NEW ID ADDED TO LINKED DATA
+#
+#Add. Mss 48049 f.302 recipient should be Walsingham [28530]
+19699 MS Add._Mss_48049_f.302 28530
+#
+#1058 should be mapped to 1071 (linked to https://en.wikipedia.org/wiki/Anne_Sackville,_Baroness_Dacre)
+1058 0 e 1071
+#CHANGED IN LINKED DATA (AFTER CHECK BY RUTH)
+#
+#24486 not female (council)
+#ADDED TO additional_men
+#
+#10951 should be mapped to 3945
+10951 0 e 3945
+#
+#8658 should be mapped to 13101
+8658 0 e 13101
+#
+#8260 and 8351 should be mapped to 8325
+8260 0 e 8325
+8351 0 e 8325
+#Could you double check the ones below until next stars (just 12 instructions) as I’m not sure you got all of them  because I was adding to them (not in order, as I group types of instruction) the day you dealt with them :
+# DEALT WITH ALREADY
+# FROM lettertimegaps IMPLEMENTATION:
+# "all letters 1939 should be mapped to 28113"
+1939 0 e 28113
+# FROM lettertimegaps IMPLEMENTATION:
+# For ID 2508: For letters dating from after 1525 (either sent or received by this ID need new rule (problem intro by title 'Admiral of France': (’15250224’, ’15430601’, ‘24082’), (‘15430602’, ‘15521102’, ‘31363’), (‘15521103’, ’15720824’, ‘31366’)
+2508 00000000 15250223 2508 15250224 15430601 24082 15430602 15521102 31363 15521103 15720824 31366 MS SP_83/11_f.282 2505
+# NOTE: INFO ADDED FROM EMAIL OF 04/04/19
+
+***NEW started 22/11/18***
+
+# 26969 - 2 letter, I think they are 2 separate ‘Robert Whytlay’s’ so create a new ID and label for letter SP 46/162 f.239.
+# IMPLEMENTED IN specific_replace
+
+#Of letters assigned to 33470 separate out SP 46/162 f.187 and assign new NUMBER ID and label ‘- Twysell’
+33470 MS SP_46/162_f.187 38191
+
+#SP 46/71 f.3 reassigned to sender ID 35199
+35198 MS SP_46/71_f.3 35199
+
+#First letter by 33105 (date 1573) actually sent by 30168
+33105 MS spo1_MQIS_SAL-v002-p002_mqis_sal-v002-p002-m0142-cm 30168
+
+# 16003 should be mapped to 15969
+16003 0 e 15969
+
+# 19474 should be mapped to 19475
+19474 0 e 19475
+
+# 10706 needs splitting out into 4 separate Godfrey Foljambe’s (due to father and son having same name, plus several namesakes including exile recusant. SO first 2 letters from 1526 should be assigned new number ID with label ‘Godfrey Foljambe’. The letters dating from after 1583 also need a new number and label (also ‘Godfrey Foljambe’). Of those letters from after 1583, there is one (SP 12/227 f.63) that should be separated out and given ANOTHER new ID, and assigned this linked data:https://www.historyofparliamentonline.org/volume/1558-1603/member/foljambe-godfrey-1558-95 Does that make sense? It’s a complex one. ONE OF THE 1526 LETTERS HAS IN FACT ALREADY BEEN ASSIGNED A NEW ID 38067 [CHANGED TO 38086] FURTHER UP IN THE DISAMBIGUATION NOTES (BUT DATA HASN'T BEEN IMPLEMENTED IN INTERFACE YET?). ASSIGNING THE OTHER 1526 LETTER THE SAME ID BELOW.
+10706 00000000 15261231 38086 15270101 15831231 10706 15840101 20000000 38192 MS SP_12/227_f.63
+
+# 16741 - all except the last two letters ( SP 12/206 f.18 and Lansdowne Vol/71 f.174) should be assigned a new NUMBER ID (can you create Seb?), and the following label and linked data: Anne Percy, Countess of Northumberland https://en.wikipedia.org/wiki/Anne_Percy,_Countess_of_Northumberland - ALREADY DEALT WITH BY EARLIER DISAMBIGUATION - MOST OF THESE LETTERS ARE MAPPED TO 5415 OR 6430, SEE DISAMBIGUATION RULE FROM JANUARY 2017 AND LINKED DATA HAS BEEN ADDED TO 5415.
+
+# 30198 - Thomas Smith issues:
+#1) The following letters are currently assigned to ID 30198 as either sender or recipient. they should all be reassigned to 37917 (his son): SP 63/40 f.194, SP 63/38 f.86, SP 63/38 f.62, SP 63/37 f.115, SP 63/36 f.46, SP 63/40 f.194, SP 63/37 f.115, SP 63/36 f.46
+#Also, any letters from after 1577 should be assigned to ID 33364
+30198 00000000 15761231 30198 15770101 20000000 33364
+33364 MS SP_63/40_f.194 37917 MS SP_63/37_f.115 37917 MS SP_63/36_f.46 37917 MS SP_63/40_f.194 37917 MS SP_63/37_f.115 37917 MS SP_63/36_f.46 37917 
+22233 MS SP_63/38_f.86 37917
+31276 MS SP_63/38_f.62 37917
+
+#6724 should be re-disambiguated. All letters dating 1582 or after should stay assigned to 6724. All dating from before that should be assigned a new number and label: 38084 John Bell, Bishop of Worcester https://en.wikipedia.org/wiki/John_Bell_(bishop_of_Worcester)
+#DEALT WITH IN lettertimegaps_subs_revised_converted_edited
+
+#4025 https://en.wikipedia.org/wiki/Charles_III,_Duke_of_Bourbon
+#ADDED TO DISAMBIGUATION NOTES LINKED DATA LIST
+
+#34920 should be mapped to 32902 
+34920 0 e 32902
+
+#Letter SP 65/12 f.26, sender should be John Perrot ID 29257 (not Fenton ID 9914 - note fault here with SPO metadata labels, not our cleaning).
+9914 MS SP_65/12_f.26 29257
+
+#***NEW started 20/06/18***
+# 7797  	       Edward Collins  Aleppo and King’s Bench actually allepo Collins not same as KB Collins in all likelihood based on handwriting. Collins was the consul at aleppo. Can we separate out and create a new Number and ID (same name)?
+7797 MS SP_97/2_f.78 38193
+
+#32246	       Thomas Alabaster, 20 letters, Genoa, Venice, London. One possible cause is that he seems to be writing from London and Venice in March (London, venice, London) but I think Venice is an error as he is just mentioning someone from Venice? - NOTHING TO DO THEN?
+
+#32307 https://doi.org/10.1093/ref:odnb/47037
+#ADDED TO DISAMBIGUATION NOTES LINKED DATA LIST
+
+# 4636 One location wrongly identified as Manila [4665]
+#CORRECTED IN places_docs_final (WITH NEW BACKUP)
+
+# 17857 - these letters wrongly attributed: SP 70/34 f.63, SP 70/35 f.131, SP 63/33 f.36. Assign new label and NUMBER ID ‘John Norris’
+17857 MS SP_70/34_f.63 38194 MS SP_70/35_f.131 38194 MS SP_63/33_f.36 38194
+
+#4878 should be mapped to 6073
+4878 0 e 6073
+
+# For ID 23954 all letters dating from before 1526 should be assigned a new NUMBER ID and label ‘Peter Martyr d'Anghiera’ and given this linked data: https://en.wikipedia.org/wiki/Peter_Martyr_d%27Anghiera 
+23954 00000000 15251231 38195 15260101 20000000 23954
+
+# PLACE data: Wardon Abbey (7493): Should actually be Waldon Abbey…. Correct it (I assume Waldon abbey is in there?)
+# CORRECTED IN places_docs_final (WITH NEW BACKUP)
+
+#The following letters currently assigned ID 37423 should be reassigned ID 37420: Cotton Caligula C/I f.219,  SP 52/15 f.120, SP 52/15 f.133, SP 53/2 f.27, SP 52/16 f.78, 
+#37423 MS Cotton_Caligula_C/I_f.219 37240 MS SP_52/15_f.120 37240 MS SP_52/15_f.133 37240 MS SP_53/2_f.27 37240 MS SP_52/16_f.78 37240 - IMPLEMENTED BY HAND IN people_docs
+
+#Error, there are a couple of letters and labels associated with ID 10002 that are in fact ID 17762. If the letter (whether sender OR recipient dates from after 15580927 then it should be mapped to 17762 instead.
+10002 00000000 15580927 10002 15580928 20000000 17762
+
+#PLACE Need to check if Mecklynnes (4775) should be Mechelen
+# IT IS - CORRECTED IN places_docs_final (WITH NEW BACKUP) AND CHANGED ALL MAPPINGS TO MOST COMMON NAME OF Mechelen, WHICH IS Mechlin.
+
+# ID 35683 should be mapped to ID 35677 AND 29809 [Cecil, who was using Leveson as a kind of PO box]. Linked data for 35677 https://en.wikipedia.org/wiki/William_Leveson
+35683 0 e 35677,29809
+
+#Map 20690 to 23301
+20690 0 e 23301
+
+# 17916. Those dating from before 1545 (either as sender or recipient) should be reassigned to ID 5711. 
+17916 00000000 15441231 5711 15450101 20000000 17916
+
+#19910 https://en.wikipedia.org/wiki/Matth%C3%A4us_Schiner
+#35302 http://www.historyofparliamentonline.org/volume/1509-1558/member/damsell-%28damosel%29-william-1521-82
+# ADDED TO DISAMBIGUATION NOTES LINKED DATA LIST
+
+#Need to collapse Rome (ex Urbe) (5880) and Rome (5879)
+#CORRECTED IN places_docs_final (WITH NEW BACKUP)
+
+***NEW started 01/12/17***
+#19325 writing to 11844 from Edinburgh on 15211217, and to 3674 from Ghent (442km away) on 15211217 (0 days later).
+#Edinburgh = error, should be Ghent.
+# FIXED IN specific_replace (WHICH CAN NOW HANDLE VARIABLE LENGTH CORRECTION STRINGS) FOR SP_1/23_f.165
+
+#25883 writing to 3674 from Rome on 15220128, and to 3674 from London (891km away) on 15220129 (1 days later).
+#Error, London should be Rome
+# FIXED IN specific_replace (WHICH CAN NOW HANDLE VARIABLE LENGTH CORRECTION STRINGS) FOR Cotton_Vitellius_B/V_f.35
+
+#10072 writing to 23272 from Louvain on 15710902, and to 4685 from Louvian (473km away) on 15710902 (0 days later).
+#14700 writing to 23272 from Louvain on 15710902, and to 4685 from Louvian (473km away) on 15710902 (0 days later).
+#TYPO, all should be Louvain.
+# CORRECTED IN places_docs_final (WITH NEW BACKUP)
+
+#32851 writing to 24566 from Kenninghall Lodge on 15420902, and to 28048 from Newmarket, at the Court of Frederick Count Palatine (506km away) on 15420902 (0 days later).
+#The latter is JUST Newmarket (which isn’t many miles at all)
+# CAUSED BY ERRONEOUS MAPPING IN places_docs_final FOR ONE OF THE MS. NOW CORRECTED IN places_docs_final (AND ALSO CORRECTED IN places.metadata)
+
+#26415 writing to 28530 from Perth on 15830727, and to 30478 from St. Nicholas (1546km away) on 15830729 (2 days later).
+#26415 writing to 30478 from St. Nicholas on 15830729, and to 28530 from Perth (1546km away) on 15830731 (2 days later).
+#Caused by Henry Bowes wrongly being ID’ed (by SPO) as Robert Bowes. For letter Harley 6993 f.52 the sender is ‘Sir Henry Bowes’ who doesn’t appear to appear elsewhere in dataset, so needs new ID 
+26415 MS Harley_6993_f.52 38196
+
+#32307 writing to 30478 from St. Nicholas on 15680812, and to 4882 from Narva (521km away) on 15680812 (0 days later).
+#9941 writing to 30478 from St. Nicholas on 15680812, and to 4882 from Narva (521km away) on 15680812 (0 days later).
+#26415 writing to 28530 from Perth on 15830727, and to 30478 from St. Nicholas (1546km away) on 15830729 (2 days later).
+#26415 writing to 30478 from St. Nicholas on 15830729, and to 28530 from Perth (1546km away) on 15830731 (2 days later).
+#FIRST 2 I think are due to a confusion, and I think St Nicholas is wrong, and that they are on the Narva river in Estonia, and near this location: https://en.wikipedia.org/wiki/Ivangorod_Fortress
+#CREATED NEW LOCATION 8051 AND MAPPED MS SP_70/101_f.32 (JOINTLY AUTHORED FROM 32307 and 9941) TO THIS LOCATION. ALSO ADDED LINKED DATA.
+
+#29837 writing to 15766 from Bologna on 15271221, and to 3674 from Boulogne (624km away) on 15271221 (0 days later).
+#Author was Parma before this, so Bologna is correct; Boulogne is wrong. Replace in letter ID Cotton Vitellius B/IX from sender ID 29837  
+#CHANGED IN specific_replace
+
+#Disambiguation issue spotted by ‘velocity’:
+#24247 writing to 34741 from Aigues Mortes on 15380716, and to 34741 from Callan (818km away) on 15380716 (0 days later).
+#24247 writing to 26503 from Aigues Mortes on 15380716, and to 26503 from Callan (818km away) on 15380716 (0 days later).
+#24247 writing to 26503 from Callan on 15380716, and to 34741 from Aigues Mortes (818km away) on 15380716 (0 days later).
+#The ones in Callan are actually James Butler = and should be re-mapped to ID 12993. These are documents ID: Cotton Titus B/XI/2 f.386, SP 60/7 f.48, SP 60/7 f.51 
+24247 MS Cotton_Titus_B/XI/2_f.386 12993 MS SP_60/7_f.48 12993 MS SP_60/7_f.51 12993
+
+#32851 hasn’t had the rule applied that I wrote below. Again I’m worried not all these disambiguation notes have been implemented. The rules says: PERSON ID: 32851, NEW RULE: [[’00000000’, '15231231’, '37661'], ['15240101', '15540825', '32851'], ['15540826', '15720602', '37909’], [‘’, ‘’, ‘’]]
+#Except: PERSON ID: 32851, MS HANDLES: SP_12/203_f.72, Harley_290_f.17, Harley_290_f.74, Harley_290_f.90, Harley_290_f.91, Harley_290_f.92, Harley_290_f.93, and any further ones where sender or recipient is ‘Mary, Queen of Scots’, assign ID 37909
+#PERSON ID: 32851, MS HANDLE: SP_12/264_f.144, assign ID 18150
+#PERSON ID: 32851, MS HANDLE: Cotton_Caligula_C/III_f.515, assign ID 38050
+#Also 32851 should be linked to http://en.wikipedia.org/wiki/Thomas_Howard,_3rd_Duke_of_Norfolk
+#THIS MAY HAVE BEEN DUE A TYPO, NOW CORRECTED - SHOULD WORK, BUT I'LL DOUBLE-CHECK.
+
+#19995 seems to exist (was on list of itinerary overlaps) but doesn’t have any correspondence. Does that mean already mapped? If so, should be mapped to 20477? 
+#YES, ITINERARIES WERE CALCULATED FROM OLDER VERSION OF DATA. THIS ID IS NOW MAPPED.
+
+#19474 should be mapped to 19475
+19474 0 e 19475
+
+#20690 should be mapped to 23301
+20690 0 e 23301
+
+#4121 should be mapped to 3884
+4121 0 e 3884
+
+#7899 should mapped to 7901
+7899 0 e 7901
+
+#***********************************************
+#*** NEW STARTED 9/11/17 ***
+#35194 + William Cardynall should NOT be collapsed with 6215; reassign original number
+35194 0 e 35194
+
+#***FROM checkforchains_straight_revised_190328_combined***
+
+# THE FOLLOWING ARE FROM OUR FINAL CHECK ON 11/04/19
+#***Errors discovered as of 20190411***
+
+#Sir William Cecil, Lord Burghley [30478] still has a few errors:
+#- Lansdowne Vol/103 f.268 should be mapped to 35214
+#- A letter with no doc ref: Year: 1598-9, Place: Richmond, Title: The Lords of the Council to Lord Burghley, Day: March. 4. This should be mapped to 32465
+#- SP 12/273 f.44, SP 98/1 f.248, SP 98/1 f.250, SP 98/1 f.252, SP 98/1 f.254,  SP 98/1 f.256, SP 97/4 f.160 should be mapped to 29809
+30478 MS Lansdowne_Vol/103_f.268 35214
+30478 MS spo1_MQIS_SAL-v009-p009_mqis_sal-v009-p009-m0234-cm.xml 32465
+30478 MS SP_12/273_f.44 29809 MS SP_98/1_f.248 29809 MS SP_98/1_f.250 29809 MS SP_98/1_f.252 29809 MS SP_98/1_f.254 29809 MS SP_98/1_f.256 29809 MS SP_97/4_f.160 29809
+#
+#For person ID 1653, SP 63/137 f.58 should be mapped instead to 12250 
+1653 MS SP_63/137_f.58 12250
+#
+#John Petit [15615] should be mapped to Hugh Owen [12255]
+15615 0 e 12255
+#
+#This is a rule from below that hasn't been implemented that needs to be:
+#30198 - Thomas Smith issues:
+#1) The following letters are currently assigned to ID 30198 as either sender or recipient. they should all be reassigned to 37917 (his son): SP 63/40 f.194, SP 63/38 f.86, SP 63/38 f.62, SP 63/37 f.115, SP 63/36 f.46, SP 63/40 f.194, SP 63/37  f.115, SP 63/36 f.46
+#Also, any letters from after 1577 should be assigned to ID 33364
+# FIXED RULE ABOVE
+#
+# ***NOTE INSERTED ON 08/06/2020***
+# ALL OF FOLLOWING SECTION UNTIL THE NEXT ***s SHOULD BE COMMENTED OUT FOR DATA GOING TO STATE PAPERS ONLINE, SINCE THESE WERE CHANGES RELATED TO THE INTERPRETATION OF ALIASES AND THEREFORE REMOVED AS THEY REPRESENT UNPUBLISHED HISTORICAL RESEARCH RESULTS
+# 
+##
+##Final point - 
+##The following people I have clapped down a lot of aliases:
+##Hugh Owen [12255]
+##H. Saint Main [alias Wm. Sterrell] [11094]
+##John Petit [15615]
+##Can we keep all their aliases separate for now? 
+##
+## IN RESPONSE TO THIS spies_unmap_ID SCRIPT OUTPUTS (REMOVING ALL LINES WITH (see letters)) AND ADDING SOME ID ENTRIES MANUALLY:
+##
+##John Petit [15615] and
+##Hugh Owen [12255]
+##Currently collapses
+##28 A Monk at Liege
+##12418 I. Hugh Owen
+##12576 J. B. [alias John Petit]
+##12834 J.B. John Petit
+##13719 Jn. Petit
+##33136 Thomas Nichols
+##33139 Thomas Nicols
+##34619 W. Nicols
+##
+##Here you should, group:
+##John Petit 15615 with the Hugh Owen (PROBABLY MEANS John Petit HERE?) labels: J. B. [alias John Petit], J.B. John Petit, and Jn. Petit 
+#12576 0 e 15615
+#12834 0 e 15615
+#13719 0 e 15615
+##
+##Group Thomas Nichols and Thomas Nicols 
+##
+#33139 0 e 33136
+##
+##Group Hugh Owen and ‘I. Hugh Owen’
+##
+#12418 0 e 12255
+##Leave others on own
+##
+#28 0 e 28
+#34619 0 e 34619
+##
+##H. Saint Main [alias Wm. Sterrell] [11094]
+##
+##Currently:
+##Ant. Rivers (see letters)
+##1119 Ant. Rivers
+##Fran. Cordale (see letters)
+##9007 Fran. Cordale
+##Fras. Cordale (see letters)
+##9407 Fras. Cordale
+##George Fenner (see letters)
+##10089 George Fenner
+##H. Saint Main (see letters)
+##11093 H. Saint Main
+##H. Saintmain (see letters)
+##11095 H. Saintmain
+##H. St. Main [alias W. Sterrell] (see letters)
+##11103 H. St. Main [alias W. Sterrell]
+##Ha. Wicham [alias Sterrell] (see letters)
+##11129 Ha. Wicham [alias Sterrell]
+##Halyns (see letters)
+##11149 Halyns
+##Harry Wicham [alias Sterrell] (see letters)
+##11259 Harry Wicham [alias Sterrell]
+##Harry Wicham, alias Sterrell (see letters)
+##11260 Harry Wicham, alias Sterrell
+##Hen. Saint Main alias Sterrell (see letters)
+##11347 Hen. Saint Main alias Sterrell
+##Hen. Saintmain (see letters)
+##11348 Hen. Saintmain
+##Hen. Saintmain [alias Wm. Sterrell] (see letters)
+##11349 Hen. Saintmain [alias Wm. Sterrell]
+##Henry Wickham (see letters)
+##11865  Henry Wickham
+##M. Francquelin (see letters)
+##18694 M. Francquelin
+##Mr. Robinson (see letters)
+##22009 Mr. Robinson
+##Mr. Saintmain (see letters)
+##22044 Mr. Saintmain
+##Mr. Sterrell (see letters)
+##22134 Mr. Sterrell
+##Peeter Halyns (see letters)
+##23831 Peeter Halyns
+##Peter Halyns (see letters)
+##23938 Peter Halyns
+##Pieter Halyns (see letters)
+##24265 Pieter Halyns
+##Robinson (see letters)
+##27021 Robinson
+##Saint Mains (see letters)
+##27476 Saint Mains
+##Sir Peter Hollins (see letters)
+##29532 Sir Peter Hollins
+##Sterrell (see letters)
+##31045 Sterrell
+##Thomas Phelippes (see letters)
+##33192 Thomas Phelippes
+##Vincent Orwell (see letters)
+##34428 Vincent Orwell
+##W. Sterrell (see letters)
+##34650 W. Sterrell
+##Will. Sterrell (see letters)
+##34973 Will. Sterrell
+##William Sterrelle (see letters)
+##36035 William Sterrelle
+##Wm. Sterrell (see letters)
+##36537 Wm. Sterrell
+##Instead for the following groups: The main one under the main label:
+##
+##1. 
+##Hen. Saint Main alias Sterrell (see letters)
+##11347 Hen. Saint Main alias Sterrell
+##Hen. Saintmain (see letters)
+##11348 Hen. Saintmain
+##Hen. Saintmain [alias Wm. Sterrell] (see letters)
+##11349 Hen. Saintmain [alias Wm. Sterrell]
+##H. Saint Main (see letters)
+##11093 H. Saint Main
+##H. Saintmain (see letters)
+##11095 H. Saintmain
+##H. St. Main [alias W. Sterrell] (see letters)
+##11103 H. St. Main [alias W. Sterrell]
+##Ha. Wicham [alias Sterrell] (see letters)
+##11129 Ha. Wicham [alias Sterrell]
+##Harry Wicham [alias Sterrell] (see letters)
+##11259 Harry Wicham [alias Sterrell]
+##Harry Wicham, alias Sterrell (see letters)
+##11260 Harry Wicham, alias Sterrell
+##Henry Wickham (see letters)
+##11865 Henry Wickham
+##Mr. Saintmain (see letters)
+##22044 Mr. Saintmain
+##Mr. Sterrell (see letters)
+##22134 Mr. Sterrell
+##Saint Mains (see letters)
+##27476 Saint Mains
+##Sterrell (see letters)
+##31045 Sterrell
+##W. Sterrell (see letters)
+##34650 W. Sterrell
+##Will. Sterrell (see letters)
+##34973 Will. Sterrell
+##William Sterrelle (see letters)
+##36035 William Sterrelle
+##Wm. Sterrell (see letters)
+##36537 Wm. Sterrell
+##
+#11347 0 e 11094
+#11348 0 e 11094
+#11349 0 e 11094
+#11093 0 e 11094
+#11095 0 e 11094
+#11103 0 e 11094
+#11129 0 e 11094
+#11259 0 e 11094
+#11260 0 e 11094
+#11865 0 e 11094
+#22044 0 e 11094
+#22134 0 e 11094
+#27476 0 e 11094
+#31045 0 e 11094
+#34650 0 e 11094
+#34973 0 e 11094
+#36035 0 e 11094
+#36537 0 e 11094
+##
+##2
+##Ant. Rivers (see letters)
+##1119 Ant. Rivers
+#1119 0 e 1119
+##
+##3
+##Fran. Cordale (see letters)
+##9007 Fran. Cordale
+##Fras. Cordale (see letters)
+##9407 Fras. Cordale
+#9007 0 e 9407
+#9407 0 e 9407
+##
+##4
+##George Fenner (see letters)
+##10089 George Fenner
+#10089 0 e 10089
+##4
+##Halyns (see letters)
+##11149 Halyns
+##Peeter Halyns (see letters)
+##23831 Peeter Halyns
+##Peter Halyns (see letters)
+##23938 Peter Halyns
+##Pieter Halyns (see letters)
+##24265 Pieter Halyns
+##Sir Peter Hollins (see letters)
+##29532 Sir Peter Hollins
+#11149 0 e 23938
+#23831 0 e 23938
+#23938 0 e 23938
+#24265 0 e 23938
+#29532 0 e 23938
+##
+##5
+##M. Francquelin (see letters)
+##18694 M. Francquelin
+#18694 0 e 18694
+##
+##6
+##Mr. Robinson (see letters)
+##22009 Mr. Robinson
+##Robinson (see letters)
+##27021 Robinson
+#22009 0 e 27021
+#27021 0 e 27021
+## IN ADDITION THERE IS ALSO Robert Robinson [26848], TO BE MAPPED TO THE ROBINSONS
+#26848 0 e 26848
+##
+##7
+##Vincent Orwell (see letters)
+##34428 Vincent Orwell
+#34428 0 e 34428
+##
+##And finally don’t collapse him with Thomas Phelippes (see letters)
+#33192 0 e 33192
+##
+## ***END OF SECTION TO BE COMMENTED OUT*** (SEE ABOVE, NEAR PRECEDING ***s)
+#
+#
+#For Queen Mary I [24679]:
+#Recipient: Queen Mary I
+#Author: John Lesley, Bishop of Ross
+#Year: 1571
+#Place: 
+#Title: The Bishop of Ross to Queen Mary.
+#Day: Nov. 3
+#Document Ref.:
+#Should be mapped to MQS: ID 19699
+24679 MS spo1_MQIS_SAL-v001-p001_mqis_sal-v001-p001-m1715-cm 19699
