@@ -1,6 +1,6 @@
 ### Tudor Networks of Power - Correspondence Network Dataset
 
-Ruth Ahnert, Sebastian E. Ahnert, Jose Cree, Lotte Fikkers
+Ruth Ahnert, Sebastian E. Ahnert, Jose Cree, and Lotte Fikkers
 
 © 2023. This work is licensed under a CC BY-NC-SA 4.0 license. 
 
