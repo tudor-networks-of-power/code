@@ -1,0 +1,27 @@
+set terminal postscript enhanced color "Helvetica" 10
+set output "inoutstr.ps"
+set logscale
+set multiplot
+# NOTE: IN TUDOR INTERFACE AND IN EXPORTED DATA ORDERING OF COLUMNS IS OUT-STRENGTH, THEN IN-STRENGTH. WE WANT IN-STRENGTH ON X-AXIS HERE, SO ARE using 2:1
+set xlabel "in-strength (s_{in})"
+set ylabel "out-strength (s_{out})"
+set size 0.45,0.55
+set title "a) Henry VIII"
+set origin 0.0,0.5
+plot "hen.inoutstr" using 2:1 w p pt 5 lc rgb "black" notitle, "hen.highlights.dipl.dat" using 4:3 w p pt 5 lc rgb "red" notitle, "hen.highlights.gov.dat" using 4:3 w p pt 5 lc rgb "green" notitle, "hen.highlights.seized.dat" using 4:3 w p pt 5 lc rgb "blue" notitle, x lt 2 lw 2 lc rgb "red" notitle
+set title "b) Edward VI"
+set origin 0.5,0.5
+plot "edw.inoutstr" using 2:1 w p pt 5 lc rgb "black" notitle, "edw.highlights.dipl.dat" using 4:3 w p pt 5 lc rgb "red" notitle, "edw.highlights.gov.dat" using 4:3 w p pt 5 lc rgb "green" notitle, x lt 2 lw 2 lc rgb "red" notitle
+set title "c) Mary I"
+set origin 0.0,-0.1
+plot "mar.inoutstr" using 2:1 w p pt 5 lc rgb "black" notitle, "mar.highlights.dipl.dat" using 4:3 w p pt 5 lc rgb "red" notitle, "mar.highlights.gov.dat" using 4:3 w p pt 5 lc rgb "green" notitle, x lt 2 lw 2 lc rgb "red" notitle
+set title "d) Elizabeth I"
+set origin 0.5,-0.1
+plot "eli.inoutstr" using 2:1 w p pt 5 lc rgb "black" notitle, "eli.highlights.dipl.dat" using 4:3 w p pt 5 lc rgb "red" notitle, "eli.highlights.gov.dat" using 4:3 w p pt 5 lc rgb "green" notitle, "eli.highlights.seized.dat" using 4:3 w p pt 5 lc rgb "blue" notitle, x lt 2 lw 2 lc rgb "red" notitle
+set nomultiplot
+set terminal postscript enhanced color "Helvetica" 20
+set output "inoutstr_all.ps"
+set title "Tudor Period"
+set origin 0,0
+set size 0.8,1
+plot "all.inoutstr" using 2:1 w p pt 5 lc rgb "black" notitle, x lt 2 lc rgb "red" notitle

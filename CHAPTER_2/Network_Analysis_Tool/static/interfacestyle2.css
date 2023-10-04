@@ -1,0 +1,65 @@
+
+a {vertical-align:middle; color:rgba(255,255,255,1);font-family:helvetica,arial,sans-serif; text-align: center;font-size: 8pt; text-decoration: none; opacity: 1.0;transition: color 0.3s; -ms-transition: color 0.3s; -webkit-transition: color 0.3s; -o-transition: color 0.3s; -moz-transition: color 0.3s;}
+
+a:hover {vertical-align:middle; color:rgba(150,150,150,1);font-family:helvetica,arial,sans-serif;  text-align: center;font-size: 8pt; text-decoration: none; opacity: 1.0}
+
+.biglist {vertical-align:top; color:rgba(200,200,200,1);font-family:helvetica,arial,sans-serif; background-color:rgba(0,0,0,0.7); text-align: left; width: 70%;font-size: 8pt; position: absolute; left: 5%; top: 10%;border-style: solid;border-width: 0pt; border-radius: 10pt; padding: 10pt;border-color:rgb(200,200,200); height: 80%; overflow: auto;}
+
+.biglist table {color:rgba(255,255,255,1);font-family:helvetica,arial,sans-serif; text-align: left;font-size: 8pt; overflow: auto;}
+
+.searchbox {vertical-align:top; color:rgba(200,200,200,1);font-family:helvetica,arial,sans-serif; background-color:rgba(0,0,0,0.7); text-align: left; width: 20%;font-size: 8pt; position: absolute; left: 75%; top: 2%;border-style: solid;border-width: 0pt; border-radius: 10pt; padding: 10pt;border-color:rgb(200,200,200); height: 3%; overflow: auto;}
+
+.xmlprint {vertical-align:top; color:rgba(200,200,200,1);font-family:helvetica,arial,sans-serif; background-color:rgba(0,0,0,0.7); text-align: left; width: 20%;font-size: 8pt; position: absolute; left: 75%; top: 13%;border-style: solid;border-width: 0pt; border-radius: 10pt; padding: 10pt;border-color:rgb(200,200,200); height: 77%; overflow: auto;}
+
+.xmlprint span {color:rgba(100,100,100,1);background-color:rgba(200,200,200,1);font-size: 8pt;}
+
+.bar {background-color: rgba(150,150,150,0.5); top: 10%; height:2%; width:0.2%; position: absolute;}
+
+.leftyear {font-family:helvetica,arial,sans-serif;background-color: rgba(255,255,255,0.5); color: rgba(150,150,150,1); left: 75.3%; top: 10.1%; position: absolute; transform: rotate(-90deg); font-size: 7pt;}
+
+.rightyear {font-family:helvetica,arial,sans-serif;background-color: rgba(255,255,255,0.5); color: rgba(150,150,150,1); left: 95%; top: 10.1%; position: absolute; transform: rotate(-90deg); font-size: 7pt;}
+
+.plot {vertical-align:top; color:rgba(200,200,200,1);font-family:helvetica,arial,sans-serif; background-color:rgba(0,0,0,0.7); text-align: left; width: 17%;font-size: 8pt; position: absolute; left: 80%; top: 10%;border-style: solid;border-width: 0pt; border-radius: 10pt; padding: 10pt;border-color:rgb(200,200,200); height: 45%; overflow: auto;}
+
+.plot img {width:100%;}
+.fromlist {vertical-align:top; color:rgba(200,200,200,1);font-family:helvetica,arial,sans-serif; background-color:rgba(0,0,0,0.7); text-align: left; width: 30%;font-size: 8pt; position: absolute; left: 40%; top: 30%;border-style: solid;border-width: 0pt; border-radius: 10pt; padding: 10pt;border-color:rgb(200,200,200); height: 25%; overflow: auto;}
+
+.tolist {vertical-align:top; color:rgba(200,200,200,1);font-family:helvetica,arial,sans-serif; background-color:rgba(0,0,0,0.7); text-align: left; width: 30%;font-size: 8pt; position: absolute; left: 40%; top: 65%;border-style: solid;border-width: 0pt; border-radius: 10pt; padding: 10pt;border-color:rgb(200,200,200); height: 25%; overflow: auto;}
+
+.wholelist {vertical-align:top; color:rgba(200,200,200,1);font-family:helvetica,arial,sans-serif; background-color:rgba(0,0,0,0.7); text-align: left; width: 45%;font-size: 8pt; position: absolute; left: 50%; top: 55%;border-style: solid;border-width: 0pt; border-radius: 10pt; padding: 10pt;border-color:rgb(200,200,200); height: 35%; overflow: auto;}
+
+.alias {vertical-align:top; color:rgba(200,200,200,1);font-family:helvetica,arial,sans-serif; background-color:rgba(0,0,0,0.7); text-align: left; width: 30%;font-size: 8pt; position: absolute; left: 40%; top: 10%;border-style: solid;border-width: 0pt; border-radius: 10pt; padding: 10pt;border-color:rgb(200,200,200); height: 10%; overflow: auto;}
+
+.alias a {vertical-align:middle; color:rgba(200,200,200,1);font-family:helvetica,arial,sans-serif; text-align: center;font-size: 8pt; text-decoration: none; opacity: 1.0;transition: color 0.3s; -ms-transition: color 0.3s; -webkit-transition: color 0.3s; -o-transition: color 0.3s; -moz-transition: color 0.3s;}
+
+.xml {vertical-align:top; color:rgba(200,200,200,1);font-family:helvetica,arial,sans-serif; background-color:rgba(0,0,0,0.7); text-align: left; width: 32%;font-size: 8pt; position: absolute; left: 63%; top: 10%;border-style: solid;border-width: 0pt; border-radius: 10pt; padding: 10pt;border-color:rgb(200,200,200); height: 35%; overflow: auto;}
+
+.title {vertical-align: top; color:rgba(0,0,0,0.7);font-family:helvetica,arial,sans-serif; background-color:rgba(0,0,0,0); text-align: justified; width: 80%;font-size: 36pt; position: absolute; left: 5%; top: 0%;border-style: solid;border-width: 0pt; border-radius: 10pt; padding: 10pt;border-color:rgb(200,200,200); height: 8%; opacity: 0.7}
+
+.title span {color:rgba(0,0,0,0.7);font-family:helvetica,arial,sans-serif; background-color:rgba(0,0,0,0); text-align: justified; font-size: 8pt;}
+
+.current {vertical-align: bottom; color:rgb(200,200,200);font-family:helvetica,arial,sans-serif; background-color:rgba(0,0,0,0.7); text-align: justified; width: 30%;font-size: 8pt; position: absolute; left: 5%; top: 10%;border-style: solid;border-width: 0pt; border-radius: 10pt; padding: 10pt;border-color:rgb(200,200,200); height: 80%;}
+
+.recipe a {vertical-align:middle; color:rgba(200,200,200,0.5);font-family:helvetica,arial,sans-serif; text-align: center;font-size: 8pt; text-decoration: none; opacity: 1.0}
+
+.recipe a:hover {vertical-align:middle; color:rgba(200,200,200,1);font-family:helvetica,arial,sans-serif;  text-align: center;font-size: 8pt; text-decoration: none; opacity: 1.0}
+
+.image {vertical-align:top; color:rgba(200,200,200,1);font-family:helvetica,arial,sans-serif; background-color:rgba(0,0,0,1); text-align: left; width: 80%;font-size: 8pt; position: absolute; left: 10%; top: 10%;border-style: solid;border-width: 0pt; border-radius: 30pt; padding: 30pt;border-color:rgb(200,200,200); height: 80%; overflow: auto;}
+
+.actualimage {vertical-align:top; color:rgba(200,200,200,1);font-family:helvetica,arial,sans-serif; background-color:rgba(0,0,0,1); text-align: left; width: 100%;font-size: 8pt; position: absolute; left: 0%; top: 0%;border-style: solid;border-width: 0pt; border-radius: 0pt; padding: 0pt;border-color:rgb(200,200,200); height: 100%; overflow: auto;}
+
+.x {vertical-align:top; color:rgba(200,200,200,1);font-family:helvetica,arial,sans-serif; background-color:rgba(0,0,0,1); text-align: left; width: 5%;font-size: 24pt; position: absolute; left: 90%; top: 5%;border-style: solid;border-width: 0pt; border-radius: 5pt; padding: 5pt;border-color:rgb(200,200,200); height: 5%; overflow: auto;}
+
+.prev {vertical-align:top; color:rgba(200,200,200,1);font-family:helvetica,arial,sans-serif; background-color:rgba(0,0,0,1); text-align: left; width: 5%;font-size: 24pt; position: absolute; left: 5%; top: 90%;border-style: solid;border-width: 0pt; border-radius: 5pt; padding: 5pt;border-color:rgb(200,200,200); height: 5%; overflow: auto;}
+
+.next {vertical-align:top; color:rgba(200,200,200,1);font-family:helvetica,arial,sans-serif; background-color:rgba(0,0,0,1); text-align: left; width: 5%;font-size: 24pt; position: absolute; left: 90%; top: 90%;border-style: solid;border-width: 0pt; border-radius: 5pt; padding: 5pt;border-color:rgb(200,200,200); height: 5%; overflow: auto;}
+
+.dark {vertical-align:top; color:rgba(200,200,200,1);font-family:helvetica,arial,sans-serif; background-color:rgba(0,0,0,0.7); text-align: left; width: 100%;font-size: 8pt; position: absolute; left: 0%; top: 0%;border-style: solid;border-width: 0pt; border-radius: 0pt; padding: 0pt;border-color:rgb(200,200,200); height: 100%}
+
+.squarebox {position: relative; top: 0px; width: 50px; height: 15px;} 
+
+.squarebox .square1 {position: absolute; left: 0px; width: 10px; height: 10px; top: 2px;}
+.squarebox .square2 {position: absolute; left: 12px; width: 10px; height: 10px; top: 2px;}
+.squarebox .square3 {position: absolute; left: 24px; width: 10px; height: 10px; top: 2px;}
+.squarebox .square4 {position: absolute; left: 36px; width: 10px; height: 10px; top: 2px;}
+
