@@ -16,7 +16,7 @@ Other files in this folder:
 
 - `added_people` - Added people labels created in the disambiguation and deduplication process.
 
-- `renamed_people' - Modified people labels created in the disambiguation and deduplication process.
+- `renamed_people` - Modified people labels created in the disambiguation and deduplication process.
 
 - `bigrank.out` - The overall file of network metrics for everyone in the dataset, produced by the Network Analysis Tool.
 
