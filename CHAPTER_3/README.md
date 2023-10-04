@@ -6,6 +6,6 @@ Files in this folder:
 
 - `bigedgerank.out` - The overall file of network edge metrics for all connections in the dataset, produced by the Network Analysis Tool.
 
-The script `chapter_3_results.sh` produces numerical results given in Chapter 3.
+The script `chapter_3_results.sh` produces numerical results given in Chapter 3. `namelist` is used by this file.
 
 
