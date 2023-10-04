@@ -4,7 +4,7 @@ The subfolder `Network_Analysis_Tool` contains the code for this tool, which is 
 
 `python tudornetworks_bottle.py`. Note: This requires Python 2.7, which can e.g. be achieved by creating a dedicated conda environment.
 
-This creates a local web environment at [http://localhost:8082/](http://localhost:8082/). The tool relies on the XML metadata and manuscript images of the Tudor State Papers Online database for full functionality. The appropriate paths need to be inserted into the code at the indicated places. The network metrics are output into the file bigrank.out (see below).
+This creates a local web environment at [http://localhost:8082/](http://localhost:8082/). The tool relies on the XML metadata and manuscript images of the Tudor State Papers Online database for full functionality. The appropriate paths need to be inserted into the code at the indicated places. The network metrics are output into the file `bigrank.out` (see below).
 
 Other files in this folder:
 
