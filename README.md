@@ -4,4 +4,4 @@ This repository accompanies the book **Tudor Networks of Power** (Oxford Univers
 
 If you are interested in the Tudor correspondence network dataset, please refer to the `TNP_DATA` folder.
 
-The code underlying the results in the book can be found the appropriate folder for each chapter.
+The code underlying the results in the book can be found the appropriate folder for each chapter. Each of the chapter folders aims to be self-contained.
