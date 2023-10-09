@@ -15,7 +15,7 @@ For reproducibility of the results in Chapter 5 we enclose the version of `women
 
 The next and final step for creating the list of women is:
 
-`python final_women.py` - This combines `women_list_to_be_checked`, `not_women_list`, `additional_women`, and `additional_men` to produce `final_women.out`, which is the list of women used in further data analysis. This code also outputs `fromto_all_place_mapped_sorted_wtm` and fromto_all_place_mapped_sorted_mtw`, which are edgelists with female-to-male and male-to-female correspondence, as well as `fromto_all_place_mapped_sorted_women`, which provides the edge list of correspondence between women, and `fromto_all_place_mapped_sorted_at_least_one_woman`, which lists all edges with at least one female correspondent (and is the union of the preceding three files).
+`python final_women.py` - This combines `women_list_to_be_checked`, `not_women_list`, `additional_women`, and `additional_men` to produce `final_women.out`, which is the list of women used in further data analysis. This code also outputs `fromto_all_place_mapped_sorted_wtm` and `fromto_all_place_mapped_sorted_mtw`, which are edgelists with female-to-male and male-to-female correspondence, as well as `fromto_all_place_mapped_sorted_women`, which provides the edge list of correspondence between women, and `fromto_all_place_mapped_sorted_at_least_one_woman`, which lists all edges with at least one female correspondent (and is the union of the preceding three files).
 
 To enable the content analysis of the letters using `whindexfreq.py` (see below) first reassemble the index by running: 
 
