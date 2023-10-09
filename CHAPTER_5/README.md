@@ -11,13 +11,13 @@ This script uses a list of female Tudor names and titles collected on this now-d
 This generates a file called `women_list_to_be_checked` and a basic HTML page, `make_women_check.html`,for viewing contextual mapped person IDs and linked data.
 
 We ran this cleaning step in 2016, producing the files `not_women_list`, which lists IDs to be removed, as well as `additional_women` and a supplementary removal list, `additional_men`.
-For reproducibility of the results in Chapter 5 we enclose the version of `women_people_docs` produced in 2016 (`women_people_docs_2016`) and use it in `make_women_check.py`. 
+For reproducibility of the results in Chapter 5 we enclose the version of `women_people_docs` produced in 2016 (`women_people_docs_2016`) and use it in `make_women_check.py`. (Re-running the pipeline with the up-to-date `people_docs` only changes results very slightly, removing two letters from individual 27863 from `fromto_all_place_mapped_sorted_wtm`.)
 
-Re-running the pipeline with the up-to-date `people_docs` only changes results very slightly, removing two letters from individual 27863.
+The next step is:
 
-The files in this folder:
+`python final_women.py` - This combines `women_list_to_be_checked`, `not_women_list`, `additional_women`, and `additional_men` to produce `final_women.out`, which is the list of women used in further data analysis. This code also outputs `fromto_all_place_mapped_sorted_wtm` and fromto_all_place_mapped_sorted_mtw`, which are edgelists with female-to-male and male-to-female correspondence, as well as `fromto_all_place_mapped_sorted_women`, which provides the edge list of correspondence between women, and `fromto_all_place_mapped_sorted_at_least_one_woman`, which lists all edges with at least one female correspondent (and is the union of the preceding three files).
 
-- `indivnetworkstats.py` - calculates network statistics of an individual for a given time window or the entire period.
+Further files in this folder are:
 
 - `fromto_all_place_mapped_sorted` - Temporal edge list of correspondence with place of writing in plain text (see TNP_DATA for coded places)
 
@@ -28,6 +28,10 @@ The files in this folder:
 - `renamed_people` - Modified people labels created in the disambiguation and deduplication process.
 
 - `bigrank.out` - The overall file of network metrics for everyone in the dataset, produced by the Network Analysis Tool.
+
+- `network_stats.py` - This calculates basic global network statistics. (Used in `chapter_5_results.sh`.)
+
+- 
 
 The script `chapter_5_results.sh` produces numerical results given in Chapter 5.
 
