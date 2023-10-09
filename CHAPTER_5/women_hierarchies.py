@@ -67,21 +67,6 @@ if ran == 1:
             nnew.add_edge(i[0],i[1])
     n = nnew.copy()
 
-"""
-# EDGE SWAP VERY SLOW, AND ALSO FOR QUESTIONS ABOUT HIERARCHY IT'S BEST TO JUST RANDOMIZE EDGE DIRECTION (ran = 1) AND NOT TOPOLOGY
-if ran == 2:
-    le = len(n.edges())
-    for it in range(le*10):
-        if it%100 == 0:
-            print(it)
-        r = random.sample(n.edges(),2)
-        if not n.has_edge(r[0][0],r[1][1]) and not n.has_edge(r[0][1],r[1][0]):
-            n.add_edge(r[0][0],r[1][1])
-            n.add_edge(r[0][1],r[1][0])
-            n.remove_edge(r[0][0],r[0][1])
-            n.remove_edge(r[1][0],r[1][1])
-"""
-
 mf = {}
 mf[0] = 'm'
 mf[1] = 'f'
@@ -132,9 +117,6 @@ for i in triangles:
     for j in i:
         if (gender[j] == 'f' and whichgender == 'women') or (gender[j] == 'm' and whichgender == 'men'):
             others = list(set(i)-set([j]))
-            #pos1[j] += int(n.has_edge(j,others[0]))*int(n.has_edge(j,others[1]))
-            #pos2[j] += int((int(n.has_edge(j,others[0]))*int(n.has_edge(others[1],j))*int(n.has_edge(others[1],others[0])) + int(n.has_edge(j,others[1]))*int(n.has_edge(others[0],j))*int(n.has_edge(others[0],others[1]))) > 0)
-            #pos3[j] += int(n.has_edge(others[0],j))*int(n.has_edge(others[1],j))
             pos1[j] += int(n.has_edge(j,others[0]))*int(n.has_edge(j,others[1]))*(int(n.has_edge(others[0],others[1]))+int(n.has_edge(others[1],others[0])))
             pos2[j] += int(n.has_edge(j,others[0]))*int(n.has_edge(others[1],j))*int(n.has_edge(others[1],others[0])) + int(n.has_edge(j,others[1]))*int(n.has_edge(others[0],j))*int(n.has_edge(others[0],others[1]))
             pos3[j] += int(n.has_edge(others[0],j))*int(n.has_edge(others[1],j))*(int(n.has_edge(others[0],others[1]))+int(n.has_edge(others[1],others[0])))
@@ -159,13 +141,6 @@ for i in triangles:
                     pos3dic[j].append((others[1],others[0],j))
 
             total[j] += 1
-
-"""
-for i in total:
-    pos1[i] *= 1.0/total[i]
-    pos2[i] *= 1.0/total[i]
-    pos3[i] *= 1.0/total[i]
-"""
 
 pav = {}
 for i in total:
