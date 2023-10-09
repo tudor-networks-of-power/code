@@ -10,7 +10,7 @@ A further prerequisite for reproducing the results of this Chapter is:
 
 `python trending_hr.py` 
 
-This generates 
+This generates the FREQ_HR_OUT subfolder.
 
 Further files in this folder are:
 
@@ -22,22 +22,16 @@ Further files in this folder are:
 
 - `renamed_people` - Modified people labels created in the disambiguation and deduplication process.
 
-- `bigrank.out` - The overall file of network metrics for everyone in the dataset, produced by the Network Analysis Tool.
-
-- `network_stats.py` - This calculates basic global network statistics. (Used in `chapter_5_results.sh`.)
-
-- `exceptelizandbothmarys.sh` - This script removed Elizabeth I, Mary I, and Mary Queen of Scots from edge lists and produces new edgelists that end in `_wo_eliz_and_bothmarys`.
-
-- `linked_data_consolidated_amend_all_final_edited` - Linked data providing biographical background on Wikipedia, Oxford Dictionary of National Biography, VIAF, or History of Parliament.
-
 - `whindexfreq.py` - A tool that provides the *n* most significant words in a corpus of letters (passed as the first commandline argument, with *n* passed as the second) using the `key_terms` function of the `whoosh` [search engine library](https://pypi.org/project/Whoosh/).
 
-- `comparewhfreqlists.py` - This code identifies the words that differ most in rank between two rankings, where the difference metric is the logarithms of the ranks. 
+- `whindexsearch.py` - A tool that searches the letters for any term passed as the commandline argument and returns a list of letter IDs. This too uses the `whoosh` library. **Note:** This requires Python 2.7.
 
-- `women_triangles.py` - Analysis of women's involvement in different triadic network structures. This takes some time to run. **Note:** This code requires Python 2.7.
+- `multitrend.py` - Returns rank over time of one or more words passed as commandline arguments, e.g. `python multitrend.py king queen`. Requires `gnuplot`.
 
-- `women_hierarchies.py` - Analysis of women's positions in feedforward loops.
+- `extractchanges.py` - Measures the extent to which word ranks change over time.
 
-The script `chapter_5_results.sh` produces numerical results given in Chapter 5. As part of this it also runs `make_women_check.py` and `final_women.py`. It does not reassemble the index for `whindexfreq.py` (see above), which is a prerequisite for running this script.
+- `extractwordnetwork.py` - Extracts the network of letters for a word and (optionally) a time window. Requires the commandline network layout tool `neato` to produce a visualisation.
+ 
+The script `chapter_6_results.sh` produces the figures in Chapter 6. The script `chapter_6_peak_networks.sh' provides further code for the word networks created from extracted word frequency peaks. This script requires a longer runtime (in the region of hours).
 
 
