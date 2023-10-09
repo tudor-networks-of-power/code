@@ -1,0 +1,7 @@
+grep ' '$1'\t' FREQ_HR_OUT/*31.out | sort > tmp
+sed s/':'/'_'/g tmp > tmp2
+sed s/'\.'/'_'/g tmp2 > tmp3
+awk -F'_' '{print $7" "$10}' tmp3 | awk -F'.' '{print $1}' > CHANGE_PROFILES/$1.profile
+
+
+

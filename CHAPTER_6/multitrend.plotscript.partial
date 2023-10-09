@@ -1,0 +1,8 @@
+set terminal postscript color enhanced "Helvetica" 20
+set xrange[1509:1604]
+set xtics 1510,10,1600
+set logscale y
+set yrange[5000:0.3]
+set ylabel "rank"
+set xlabel "year"
+set key top left
