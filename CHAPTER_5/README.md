@@ -8,7 +8,7 @@ This script uses `people_docs` in combination with a list of female Tudor names 
 
 `python make_women_check.py`
 
-This generates a file called `women_list_to_be_checked` and a basic HTML page, `make_women_check.html`,for viewing contextual mapped person IDs and linked data.
+This generates a file called `women_list_to_be_checked` and a basic HTML page, `make_women_check.html`, for viewing contextual mapped person IDs and linked data.
 
 We ran this cleaning step in 2016, producing the files `not_women_list`, which lists IDs to be removed, as well as `additional_women` and a supplementary removal list, `additional_men`.
 For reproducibility of the results in Chapter 5 we enclose the version of `women_people_docs` produced in 2016 (`women_people_docs_2016`) and use it in `make_women_check.py`. (Re-running the pipeline with the up-to-date `people_docs` only changes results very slightly, removing two letters from individual 27863 from `fromto_all_place_mapped_sorted_wtm`.)
