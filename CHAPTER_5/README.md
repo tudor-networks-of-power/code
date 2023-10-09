@@ -4,6 +4,8 @@ The pipeline for generating and cleaning the list of women in the data is as fol
 
 `./women_names.grep > women_people_docs`
 
+[test.html](this)
+
 This script uses a list of female Tudor names and titles collected on this now-defunct [https://web.archive.org/web/20161004064433/http://www.kateemersonhistoricals.com/TudorWomenIndex.htm](online collection of Tudor women's biographies produced by Kate Emerson).
 
 `python make_women_check.py`
