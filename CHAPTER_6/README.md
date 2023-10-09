@@ -26,11 +26,11 @@ Further files in this folder are:
 
 - `whindexsearch.py` - A tool that searches the letters for any term passed as the commandline argument and returns a list of letter IDs. This too uses the `whoosh` library. **Note:** This requires Python 2.7.
 
-- `multitrend.py` - Returns rank over time of one or more words passed as commandline arguments, e.g. `python multitrend.py king queen`. Requires `gnuplot`.
+- `multitrend.py` - Returns a figure showing rank over time of one or more words passed as commandline arguments, e.g. `python multitrend.py king queen`. Requires `gnuplot` to produce the visualisation.
 
 - `extractchanges.py` - Measures the extent to which word ranks change over time.
 
-- `extractwordnetwork.py` - Extracts the network of letters for a word and (optionally) a time window. Requires the commandline network layout tool `neato` to produce a visualisation.
+- `extractwordnetwork.py` - Extracts the network of letters for a word and (optionally) a time window. Requires the commandline network layout tool `neato` to produce a network visualisation of this network.
  
 The script `chapter_6_results.sh` produces the figures in Chapter 6. The script `chapter_6_peak_networks.sh' provides further code for the word networks created from extracted word frequency peaks. This script requires a longer runtime (in the region of hours).
 
