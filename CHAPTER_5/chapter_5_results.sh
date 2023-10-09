@@ -28,8 +28,8 @@ echo
 echo "Letters from women to men:"
 wc -l fromto_all_place_mapped_sorted_wtm
 echo
-./exceptelizandbothmarys fromto_all_place_mapped_sorted_wtm
-./exceptelizandbothmarys fromto_all_place_mapped_sorted_mtw
+./exceptelizandbothmarys.sh fromto_all_place_mapped_sorted_wtm
+./exceptelizandbothmarys.sh fromto_all_place_mapped_sorted_mtw
 echo
 echo "Letters from men to women excluding Elizabeth I, Mary I, and Mary Queen of Scots:"
 wc -l fromto_all_place_mapped_sorted_mtw_wo_eliz_and_bothmarys
