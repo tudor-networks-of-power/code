@@ -43,7 +43,7 @@ Further files in this folder are:
 
 - `whindexfreq.py` - A tool that provides the *n* most significant words in a corpus of letters (passed as the first commandline argument, with *n* passed as the second) using the `key_terms` function of the `whoosh` [search engine library](https://pypi.org/project/Whoosh/).
 
-- `comparewhfreqlists.py` - identifies the words that differ most in rank between two rankings, where the difference metric is the logarithms of the ranks. 
+- `comparewhfreqlists.py` - This code identifies the words that differ most in rank between two rankings, where the difference metric is the logarithms of the ranks. 
 
 - `women_triangles.py` - Analysis of women's involvement in different triadic network structures. This takes some time to run. **Note:** This code requires Python 2.7.
 
