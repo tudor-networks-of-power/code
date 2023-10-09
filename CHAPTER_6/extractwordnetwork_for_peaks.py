@@ -18,7 +18,7 @@ fff = open('people_docs_auto')
 fff2 = open('renamed_people')
 fff3 = open('added_people')
 
-os.system('tudor_seb whindexsearch.py '+str(sys.argv[1]))
+os.system('python whindexsearch.py '+str(sys.argv[1]))
 
 f = open('out')
 letters = set([])
