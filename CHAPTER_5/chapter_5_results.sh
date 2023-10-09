@@ -73,7 +73,7 @@ grep cost comparewhfreqlists.out
 grep news comparewhfreqlists.out
 grep poor comparewhfreqlists.out
 # THE NEXT LINES GIVE TRIAD STATISTICS
-#tudor women_triangles.py > women_triangles_mediator_model_less_strict ### COMMENTED OUT AS TIME-CONSUMING TO RUN, OUTPUT FILES PROVIDED
+tudor women_triangles.py > women_triangles_mediator_model_less_strict ### COMMENTED OUT AS TIME-CONSUMING TO RUN, OUTPUT FILES PROVIDED
 tudor women_hierarchies.py | grep "Number"
 echo "Number of triads with feedforward loops:"
 grep '>' WOMEN_TRIANGLES/women_triangles.out | awk -F'\t' '{print $1"\t@"$2"@"}' | grep -v '@0f->1m 1m->2m 2m->0f @' | grep -v '@1m->2f 2f->0f 0f->1m @' | awk '{print $1}' | paste -sd+ - | bc
