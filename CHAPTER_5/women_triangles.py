@@ -159,23 +159,4 @@ for ii in list(triangles):
                             print(str(name[ii[0]])+'\t'+str(name[ii[1]])+'\t'+str(name[ii[2]])+'\t'+' '.join(ii)+'\t'+str(' '.join(filteredms)))
 
                             
-"""
-for i in triangles:
-    for j in i:
-        if gender[j] == 'f':
-            others = list(set(i)-set([j]))
-            pos1[j] += int(n.has_edge(j,others[0]))*int(n.has_edge(j,others[1]))
-            pos2[j] += int(int(n.has_edge(j,others[0]))*int(n.has_edge(others[1],j)) + int(n.has_edge(j,others[1]))*int(n.has_edge(others[0],j)) > 0)
-            pos3[j] += int(n.has_edge(others[0],j))*int(n.has_edge(others[1],j))
-            total[j] += 1
 
-for i in total:
-    pos1[i] *= 1.0/total[i]
-    pos2[i] *= 1.0/total[i]
-    pos3[i] *= 1.0/total[i]
-
-ff = open('women_hierarchies','w')
-for i in total:
-    ff.write(str(i)+'\t'+str(pos1[i])+'\t'+str(pos2[i])+'\t'+str(pos3[i])+'\t'+str(total[i])+'\t'+str(name[i])+'\n')
-ff.close()
-"""
