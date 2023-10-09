@@ -1,3 +1,0 @@
-source /Users/sebastianahnert/opt/anaconda3/etc/profile.d/conda.sh
-conda activate tudor
-python $*
