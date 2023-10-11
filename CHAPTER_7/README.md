@@ -1,6 +1,6 @@
 This folder contains the code underlying the research described in Chapter 7.
 
-The pipeline for the datasets relating to places of writing is as follows:
+The pipeline for generating and analysing the datasets relating to places of writing is as follows:
 
 `python placesmap.py`
 
