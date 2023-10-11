@@ -24,7 +24,7 @@ xmlparse['ctit'] = 'Title'
 
 def printxmlhtml(xml):
     s = ''
-    f = open('/Users/sebastianahnert/Desktop/DisambiguationEngine/'+xml)
+    f = open('<INSERT PATH TO SPO XML METADATA IF AVAILABLE>'+xml)
     out = 0
     count = 0
     linklist = []
@@ -69,7 +69,7 @@ def printxmlhtml(xml):
 
 def printxmlhtmlplain(xml):
     s = ''
-    f = open('/Users/sebastianahnert/Desktop/DisambiguationEngine/'+xml)
+    f = open('<INSERT PATH TO SPO XML METADATA IF AVAILABLE>'+xml)
     out = 0
     count = 0
     linklist = []
@@ -84,7 +84,7 @@ mentionedby = defaultdict(set)
 mentionedto = defaultdict(set)
 mentionedbydocs = {}
 mentionedtodocs = {}
-f = open('/Users/sebastianahnert/Dropbox/DropboxDisambiguation/mentions')
+f = open('mentions')
 for line in f:
     l = line.strip().split('\t')
     mentionedby[int(l[0])].add(int(l[2]))
