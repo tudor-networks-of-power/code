@@ -42,6 +42,6 @@ Further files in this folder are:
 
 - `velocity.py` - This calculates 'velocities', dividing distances between successive places of writing by the time elapsed. This highlights impossible itineraries, which in turn highlight likely errors in the person- or place-related metadata, or possible attempts at deception by the letter author.
  
-The script `chapter_7_results.sh` produces the figures in Chapter 7. 
+The script `chapter_7_results.sh` produces numerical results and figures in Chapter 7. 
 
 
