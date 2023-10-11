@@ -61,10 +61,10 @@ head -n 20 placehist_rank.out | awk '{print "@"$1"@"}' | xargs -I{} pname {} | a
 paste tmp2 tmp 
 echo
 echo "Number of letters with origin of writing"
-awk -F'\t' '{print "@"$6"@"}' ../fromto_all_place | grep -v '-' | wc | awk '{print $1}'
+awk -F'\t' '{print "@"$6"@"}' fromto_all_place | grep -v '-' | wc | awk '{print $1}'
 echo
 echo "Total number of letters"
-wc ../fromto_all_place | awk '{print $1}'
+wc fromto_all_place | awk '{print $1}'
 echo
 echo "Note: Total number of letters after mapping, which separates out multiple senders and recipients"
 wc fromto_all_place_mapped_sorted_wplm_itineraries_final_final | awk '{print $1}'
