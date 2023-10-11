@@ -24,7 +24,7 @@ This needs to be unpacked for the next step.
 
 6. `python overlaphtml7.py`
 
-This produces a rudimentary HTML interface for exploration of the overlapping itineraries. Contextual information includes whether the overlapping individuals corresponded before or after the overlap, and whether they may have mentioned each other in their correspondence to others.
+This produces a rudimentary HTML interface for exploration of the overlapping itineraries. Contextual information includes whether the overlapping individuals corresponded before or after the overlap, and whether they may have mentioned each other in their correspondence to others. If they may have mentioned each other the SPO XML metadata of the letter is provided (if this is available to the user).
 
 Further files in this folder are:
 
