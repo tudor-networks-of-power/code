@@ -1,0 +1,8 @@
+set terminal postscript enhanced color "Helvetica" 20
+set output "placehist.ps"
+set logscale
+set nokey
+set size 0.8,1
+set xlabel "number of letters (n_L)"
+set ylabel "number of places with n_L letters"
+plot "placehist_dist.out" using 1:2 w p pt 5 ps 1 lc rgb "red"
